@@ -1,0 +1,18 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ars-utils</groupId>
+	<artifactId>ars-utils</artifactId>
+	<packaging>pom</packaging>
+	<version>2.0</version>
+	<name>ars-utils_support</name>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<modules>
+		<module>batch-utils</module>
+	</modules>
+</project>
