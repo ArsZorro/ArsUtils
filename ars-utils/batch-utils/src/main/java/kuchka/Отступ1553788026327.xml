@@ -28,7 +28,7 @@
                 <properties:CharactersWithSpaces>11</properties:CharactersWithSpaces>
                 <properties:SharedDoc>false</properties:SharedDoc>
                 <properties:HyperlinksChanged>false</properties:HyperlinksChanged>
-                <properties:Application>Microsoft Office Wсord</properties:Application>
+                <properties:Application>Microsoft Office Word</properties:Application>
                 <properties:AppVersion>15.0000</properties:AppVersion>
                 <properties:DocSecurity>0</properties:DocSecurity>
             </properties:Properties>
@@ -44,9 +44,9 @@
                 <dc:description/>
                 <cp:keywords/>
                 <cp:lastModifiedBy>User</cp:lastModifiedBy>
-                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-28T15:46:00Z
+                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-28T15:47:00Z
                 </dcterms:modified>
-                <cp:revision>2</cp:revision>
+                <cp:revision>3</cp:revision>
                 <dc:subject/>
                 <dc:title/>
             </cp:coreProperties>
@@ -62,7 +62,10 @@
                         xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml"
                         mc:Ignorable="w14 w15 wp14">
                 <w:body>
-                    <w:p w:rsidR="006D4612" w:rsidRDefault="00E154AF">
+                    <w:p w:rsidP="00103E61" w:rsidR="006D4612" w:rsidRDefault="00E154AF">
+                        <w:pPr>
+                            <w:spacing w:after="0"/>
+                        </w:pPr>
                         <w:r>
                             <w:t>Некий текст</w:t>
                         </w:r>
@@ -118,7 +121,6 @@
                         xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml"
                         mc:Ignorable=" w15">
                 <w:zoom w:percent="120"/>
-                <w:proofState w:grammar="clean"/>
                 <w:defaultTabStop w:val="708"/>
                 <w:characterSpacingControl w:val="doNotCompress"/>
                 <w:compat>
@@ -129,6 +131,7 @@
                 </w:compat>
                 <w:rsids>
                     <w:rsidRoot w:val="00ED006B"/>
+                    <w:rsid w:val="00103E61"/>
                     <w:rsid w:val="006D4612"/>
                     <w:rsid w:val="00E154AF"/>
                     <w:rsid w:val="00ED006B"/>
