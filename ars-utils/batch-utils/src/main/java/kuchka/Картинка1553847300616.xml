@@ -22,7 +22,7 @@
                 <properties:Characters>1</properties:Characters>
                 <properties:Lines>1</properties:Lines>
                 <properties:Paragraphs>1</properties:Paragraphs>
-                <properties:TotalTime>0</properties:TotalTime>
+                <properties:TotalTime>1</properties:TotalTime>
                 <properties:ScaleCrop>false</properties:ScaleCrop>
                 <properties:LinksUpToDate>false</properties:LinksUpToDate>
                 <properties:CharactersWithSpaces>1</properties:CharactersWithSpaces>
@@ -44,9 +44,9 @@
                 <dc:description/>
                 <cp:keywords/>
                 <cp:lastModifiedBy>User</cp:lastModifiedBy>
-                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T08:14:00Z
+                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T08:16:00Z
                 </dcterms:modified>
-                <cp:revision>2</cp:revision>
+                <cp:revision>5</cp:revision>
                 <dc:subject/>
                 <dc:title/>
             </cp:coreProperties>
@@ -66,14 +66,15 @@
                         mc:Ignorable="w14 w15 wp14">
                 <w:body>
                     <w:p w:rsidR="00473A9B" w:rsidRDefault="00587F30">
+                        <w:bookmarkStart w:id="0" w:name="_GoBack"/>
                         <w:r>
                             <w:rPr>
                                 <w:noProof/>
                             </w:rPr>
                             <w:drawing>
                                 <wp:inline distB="0" distL="0" distR="0" distT="0">
-                                    <wp:extent cx="1333500" cy="333375"/>
-                                    <wp:effectExtent b="0" l="0" r="0" t="0"/>
+                                    <wp:extent cx="1129086" cy="282272"/>
+                                    <wp:effectExtent b="3810" l="0" r="0" t="0"/>
                                     <wp:docPr id="1" name="Рисунок 1"/>
                                     <wp:cNvGraphicFramePr>
                                         <a:graphicFrameLocks noChangeAspect="true"/>
@@ -94,7 +95,7 @@
                                                 <pic:spPr>
                                                     <a:xfrm>
                                                         <a:off x="0" y="0"/>
-                                                        <a:ext cx="1333500" cy="333375"/>
+                                                        <a:ext cx="1156807" cy="289202"/>
                                                     </a:xfrm>
                                                     <a:prstGeom prst="rect">
                                                         <a:avLst/>
@@ -106,7 +107,6 @@
                                 </wp:inline>
                             </w:drawing>
                         </w:r>
-                        <w:bookmarkStart w:id="0" w:name="_GoBack"/>
                         <w:bookmarkEnd w:id="0"/>
                     </w:p>
                     <w:sectPr w:rsidR="00473A9B">
@@ -177,8 +177,10 @@
                 </w:compat>
                 <w:rsids>
                     <w:rsidRoot w:val="00B62E78"/>
+                    <w:rsid w:val="003751D4"/>
                     <w:rsid w:val="00473A9B"/>
                     <w:rsid w:val="00587F30"/>
+                    <w:rsid w:val="009A0AC1"/>
                     <w:rsid w:val="00B62E78"/>
                 </w:rsids>
                 <m:mathPr>

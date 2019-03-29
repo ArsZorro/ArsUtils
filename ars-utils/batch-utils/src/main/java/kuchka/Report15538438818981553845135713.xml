@@ -41,9 +41,9 @@
                 <dcterms:created xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T07:25:00Z
                 </dcterms:created>
                 <cp:lastModifiedBy>User</cp:lastModifiedBy>
-                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T07:38:00Z
+                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T07:40:00Z
                 </dcterms:modified>
-                <cp:revision>5</cp:revision>
+                <cp:revision>6</cp:revision>
             </cp:coreProperties>
         </pkg:xmlData>
     </pkg:part>
@@ -14546,7 +14546,7 @@
                                     <w:gridSpan w:val="9"/>
                                     <w:shd w:color="D3D3D3" w:fill="D3D3D3" w:val="clear"/>
                                 </w:tcPr>
-                                <w:p w:rsidR="002420FA" w:rsidRDefault="0063438B">
+                                <w:p w:rsidR="002420FA" w:rsidRDefault="003B2C94">
                                     <w:pPr>
                                         <w:jc w:val="center"/>
                                     </w:pPr>
@@ -16867,7 +16867,7 @@
                                     <w:tcW w:type="auto" w:w="0"/>
                                     <w:gridSpan w:val="9"/>
                                 </w:tcPr>
-                                <w:p w:rsidR="002420FA" w:rsidRDefault="0063438B">
+                                <w:p w:rsidR="002420FA" w:rsidRDefault="003B2C94">
                                     <w:pPr>
                                         <w:jc w:val="center"/>
                                     </w:pPr>
@@ -18894,7 +18894,7 @@
                                     <w:gridSpan w:val="9"/>
                                     <w:shd w:color="D3D3D3" w:fill="D3D3D3" w:val="clear"/>
                                 </w:tcPr>
-                                <w:p w:rsidR="002420FA" w:rsidRDefault="0063438B">
+                                <w:p w:rsidR="002420FA" w:rsidRDefault="003B2C94">
                                     <w:pPr>
                                         <w:jc w:val="center"/>
                                     </w:pPr>
@@ -19067,7 +19067,7 @@
                                     <w:tcW w:type="auto" w:w="0"/>
                                     <w:gridSpan w:val="9"/>
                                 </w:tcPr>
-                                <w:p w:rsidR="002420FA" w:rsidRDefault="0063438B">
+                                <w:p w:rsidR="002420FA" w:rsidRDefault="003B2C94">
                                     <w:pPr>
                                         <w:jc w:val="center"/>
                                     </w:pPr>
@@ -19246,7 +19246,7 @@
                                     <w:gridSpan w:val="9"/>
                                     <w:shd w:color="D3D3D3" w:fill="D3D3D3" w:val="clear"/>
                                 </w:tcPr>
-                                <w:p w:rsidR="002420FA" w:rsidRDefault="0063438B">
+                                <w:p w:rsidR="002420FA" w:rsidRDefault="003B2C94">
                                     <w:pPr>
                                         <w:jc w:val="center"/>
                                     </w:pPr>
@@ -19419,7 +19419,7 @@
                                     <w:tcW w:type="auto" w:w="0"/>
                                     <w:gridSpan w:val="9"/>
                                 </w:tcPr>
-                                <w:p w:rsidR="002420FA" w:rsidRDefault="0063438B">
+                                <w:p w:rsidR="002420FA" w:rsidRDefault="003B2C94">
                                     <w:pPr>
                                         <w:jc w:val="center"/>
                                     </w:pPr>
@@ -26719,9 +26719,9 @@
                             <w:t>29.03.2019</w:t>
                         </w:r>
                     </w:p>
-                    <w:sectPr w:rsidR="002420FA" w:rsidSect="002F79D7">
+                    <w:sectPr w:rsidR="002420FA" w:rsidSect="00F55CE6">
                         <w:pgSz w:code="9" w:h="16839" w:w="11907"/>
-                        <w:pgMar w:bottom="1440" w:footer="720" w:gutter="0" w:header="720" w:left="1701" w:right="1440" w:top="1440"/>
+                        <w:pgMar w:bottom="1440" w:footer="720" w:gutter="0" w:header="720" w:left="1134" w:right="1440" w:top="1440"/>
                         <w:cols w:space="720"/>
                     </w:sectPr>
                 </w:body>
@@ -27119,11 +27119,13 @@
                     <w:rsid w:val="002420FA"/>
                     <w:rsid w:val="002F79D7"/>
                     <w:rsid w:val="003138A9"/>
+                    <w:rsid w:val="003B2C94"/>
                     <w:rsid w:val="004B052B"/>
                     <w:rsid w:val="0063438B"/>
                     <w:rsid w:val="00636F30"/>
                     <w:rsid w:val="009B4436"/>
                     <w:rsid w:val="00C46815"/>
+                    <w:rsid w:val="00F55CE6"/>
                 </w:rsids>
                 <m:mathPr>
                     <m:mathFont m:val="Cambria Math"/>
@@ -27984,7 +27986,7 @@
                         xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
             >
                 <w:endnote w:id="-1" w:type="separator">
-                    <w:p w:rsidP="00C46815" w:rsidR="0063438B" w:rsidRDefault="0063438B">
+                    <w:p w:rsidP="00C46815" w:rsidR="003B2C94" w:rsidRDefault="003B2C94">
                         <w:pPr>
                             <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
                         </w:pPr>
@@ -27994,7 +27996,7 @@
                     </w:p>
                 </w:endnote>
                 <w:endnote w:id="0" w:type="continuationSeparator">
-                    <w:p w:rsidP="00C46815" w:rsidR="0063438B" w:rsidRDefault="0063438B">
+                    <w:p w:rsidP="00C46815" w:rsidR="003B2C94" w:rsidRDefault="003B2C94">
                         <w:pPr>
                             <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
                         </w:pPr>
@@ -28024,7 +28026,7 @@
                          xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
             >
                 <w:footnote w:id="-1" w:type="separator">
-                    <w:p w:rsidP="00C46815" w:rsidR="0063438B" w:rsidRDefault="0063438B">
+                    <w:p w:rsidP="00C46815" w:rsidR="003B2C94" w:rsidRDefault="003B2C94">
                         <w:pPr>
                             <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
                         </w:pPr>
@@ -28034,7 +28036,7 @@
                     </w:p>
                 </w:footnote>
                 <w:footnote w:id="0" w:type="continuationSeparator">
-                    <w:p w:rsidP="00C46815" w:rsidR="0063438B" w:rsidRDefault="0063438B">
+                    <w:p w:rsidP="00C46815" w:rsidR="003B2C94" w:rsidRDefault="003B2C94">
                         <w:pPr>
                             <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
                         </w:pPr>
