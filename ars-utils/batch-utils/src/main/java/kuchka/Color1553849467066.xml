@@ -18,14 +18,14 @@
                 <properties:Template>Normal.dotm</properties:Template>
                 <properties:Company>SPecialiST RePack</properties:Company>
                 <properties:Pages>1</properties:Pages>
-                <properties:Words>0</properties:Words>
-                <properties:Characters>2</properties:Characters>
+                <properties:Words>23</properties:Words>
+                <properties:Characters>133</properties:Characters>
                 <properties:Lines>1</properties:Lines>
                 <properties:Paragraphs>1</properties:Paragraphs>
-                <properties:TotalTime>1</properties:TotalTime>
+                <properties:TotalTime>0</properties:TotalTime>
                 <properties:ScaleCrop>false</properties:ScaleCrop>
                 <properties:LinksUpToDate>false</properties:LinksUpToDate>
-                <properties:CharactersWithSpaces>2</properties:CharactersWithSpaces>
+                <properties:CharactersWithSpaces>155</properties:CharactersWithSpaces>
                 <properties:SharedDoc>false</properties:SharedDoc>
                 <properties:HyperlinksChanged>false</properties:HyperlinksChanged>
                 <properties:Application>Microsoft Office Word</properties:Application>
@@ -38,15 +38,15 @@
         <pkg:xmlData>
             <cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"
                                xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
-                <dcterms:created xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T08:35:00Z
+                <dcterms:created xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T08:50:00Z
                 </dcterms:created>
                 <dc:creator>User</dc:creator>
                 <dc:description/>
                 <cp:keywords/>
                 <cp:lastModifiedBy>User</cp:lastModifiedBy>
-                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T08:40:00Z
+                <dcterms:modified xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="dcterms:W3CDTF">2019-03-29T08:50:00Z
                 </dcterms:modified>
-                <cp:revision>4</cp:revision>
+                <cp:revision>2</cp:revision>
                 <dc:subject/>
                 <dc:title/>
             </cp:coreProperties>
@@ -62,17 +62,323 @@
                         xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml"
                         mc:Ignorable="w14 w15 wp14">
                 <w:body>
-                    <w:p w:rsidP="00D5673A" w:rsidR="00650088" w:rsidRDefault="00415688">
-                        <w:pPr>
-                            <w:spacing w:after="240"/>
-                        </w:pPr>
-                        <w:r>
-                            <w:t>Те</w:t>
-                        </w:r>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="dxa" w:w="9303"/>
+                            <w:tblBorders>
+                                <w:top w:color="auto" w:space="0" w:sz="2" w:val="single"/>
+                                <w:left w:color="auto" w:space="0" w:sz="2" w:val="single"/>
+                                <w:bottom w:color="auto" w:space="0" w:sz="0" w:val="single"/>
+                                <w:right w:color="auto" w:space="0" w:sz="2" w:val="single"/>
+                                <w:insideH w:color="auto" w:space="0" w:sz="2" w:val="single"/>
+                                <w:insideV w:color="auto" w:space="0" w:sz="2" w:val="single"/>
+                            </w:tblBorders>
+                            <w:tblCellMar>
+                                <w:top w:type="dxa" w:w="100"/>
+                                <w:left w:type="dxa" w:w="40"/>
+                                <w:bottom w:type="dxa" w:w="10"/>
+                                <w:right w:type="dxa" w:w="40"/>
+                            </w:tblCellMar>
+                            <w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="2143"/>
+                            <w:gridCol w:w="2367"/>
+                            <w:gridCol w:w="2567"/>
+                            <w:gridCol w:w="2226"/>
+                        </w:tblGrid>
+                        <w:tr w:rsidR="0079675A" w:rsidTr="000572E3">
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="7B68EE" w:fill="7B68EE" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>Категория закупки</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="7B68EE" w:fill="7B68EE" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>Количество заявок</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="7B68EE" w:fill="7B68EE" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>Количество выигранных закупок</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="7B68EE" w:fill="7B68EE" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>Средняя цена закупки</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr w:rsidR="0079675A" w:rsidTr="000572E3">
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>0</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>45</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>16</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>208 700 874</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr w:rsidR="0079675A" w:rsidTr="000572E3">
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="D3D3D3" w:fill="D3D3D3" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>015 Стройка</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="D3D3D3" w:fill="D3D3D3" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>23</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="D3D3D3" w:fill="D3D3D3" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>7</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                    <w:shd w:color="D3D3D3" w:fill="D3D3D3" w:val="clear"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>24 834 643</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr w:rsidR="0079675A" w:rsidTr="000572E3">
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>Не указана</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>5</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:tcPr>
+                                    <w:tcW w:type="dxa" w:w="20"/>
+                                </w:tcPr>
+                                <w:p w:rsidP="000572E3" w:rsidR="0079675A" w:rsidRDefault="0079675A">
+                                    <w:pPr>
+                                        <w:spacing w:after="0"/>
+                                        <w:jc w:val="center"/>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:sz w:val="16"/>
+                                        </w:rPr>
+                                        <w:t>0</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p w:rsidR="00EC24C8" w:rsidRDefault="00EC24C8">
                         <w:bookmarkStart w:id="0" w:name="_GoBack"/>
                         <w:bookmarkEnd w:id="0"/>
                     </w:p>
-                    <w:sectPr w:rsidR="00650088">
+                    <w:sectPr w:rsidR="00EC24C8">
                         <w:pgSz w:h="16838" w:w="11906"/>
                         <w:pgMar w:bottom="1134" w:footer="708" w:gutter="0" w:header="708" w:left="1701" w:right="850" w:top="1134"/>
                         <w:cols w:space="708"/>
@@ -131,12 +437,10 @@
                     <w:compatSetting w:name="doNotFlipMirrorIndents" w:uri="http://schemas.microsoft.com/office/word" w:val="1"/>
                 </w:compat>
                 <w:rsids>
-                    <w:rsidRoot w:val="00955E8A"/>
-                    <w:rsid w:val="00415688"/>
-                    <w:rsid w:val="00650088"/>
-                    <w:rsid w:val="00824421"/>
-                    <w:rsid w:val="00955E8A"/>
-                    <w:rsid w:val="00D5673A"/>
+                    <w:rsidRoot w:val="00D140DB"/>
+                    <w:rsid w:val="0079675A"/>
+                    <w:rsid w:val="00D140DB"/>
+                    <w:rsid w:val="00EC24C8"/>
                 </w:rsids>
                 <m:mathPr>
                     <m:mathFont m:val="Cambria Math"/>
@@ -164,7 +468,7 @@
                 <w:decimalSymbol w:val=","/>
                 <w:listSeparator w:val=";"/>
                 <w15:chartTrackingRefBased/>
-                <w15:docId w15:val="{4DF447C6-6763-4FCB-AF3D-6D8A517D129E}"/>
+                <w15:docId w15:val="{DC9D9A58-E0D4-46FF-B9C8-64C387AA28C4}"/>
             </w:settings>
         </pkg:xmlData>
     </pkg:part>
@@ -569,6 +873,13 @@
                 <w:style w:default="true" w:styleId="a" w:type="paragraph">
                     <w:name w:val="Normal"/>
                     <w:qFormat/>
+                    <w:rsid w:val="0079675A"/>
+                    <w:rPr>
+                        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                        <w:color w:val="000000"/>
+                        <w:sz w:val="24"/>
+                        <w:lang w:bidi="ru-RU" w:eastAsia="ru-RU"/>
+                    </w:rPr>
                 </w:style>
                 <w:style w:default="true" w:styleId="a0" w:type="character">
                     <w:name w:val="Default Paragraph Font"/>
