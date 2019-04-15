@@ -3,13 +3,10 @@ package report;
 import java.io.*;
 
 import org.apache.commons.io.FilenameUtils;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.docx4j.Docx4J;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 
 public class Docx4jService {
-    public Logger logger = LogManager.getLogger(Docx4jService.class);
 
     public void convertFile(String path, String fileName) {
         try {
