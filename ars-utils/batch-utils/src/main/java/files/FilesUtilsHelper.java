@@ -1,9 +1,17 @@
 package files;
 
 import java.io.*;
+import java.nio.file.Files;
 import java.util.*;
 
+import com.google.common.io.CharStreams;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.io.Charsets;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.Resource;
 
 public class FilesUtilsHelper {
     public void createManyBigFiles(String path, String incomingFile, String resultFile, int startRowPosition, int maxLinesCounter) throws Exception {
@@ -46,5 +54,69 @@ public class FilesUtilsHelper {
             new File(path + "\\" + resultFile));
         fileWriter.append(stringBuilder.toString());
         fileWriter.flush();
+    }
+
+
+    public static String getStringFromClassPathFile(String fileName) {
+        Resource resource = new DefaultResourceLoader().getResource("classpath:" + fileName);
+        try {
+            return getStringFromResource(resource);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String getStringFromResource(Resource resource) throws IOException {
+        InputStream stream = resource.getInputStream();
+        StringWriter writer = new StringWriter();
+        IOUtils.copy(stream, writer, "UTF-8");
+        return writer.toString();
+    }
+
+    public static List<String> readLinesFromResource(String filePath) throws IOException {
+        Resource resource = new DefaultResourceLoader().getResource("classpath:" + filePath);
+        return CharStreams.readLines(new InputStreamReader(resource.getInputStream(), Charsets.UTF_8));
+    }
+
+    public static boolean isValidRelativePath(String rootPath, String relativePath) {
+        return new File(rootPath, relativePath)
+                .toPath()
+                .normalize()
+                .startsWith(rootPath);
+    }
+
+    public static List<File> listFilesForFolder(File folder) {
+        List<File> resultFiles = new ArrayList<>();
+        try {
+            Files.walk(folder.toPath())
+                    .filter(path -> !Files.isDirectory(path))
+                    .forEach(path -> resultFiles.add(new File(path.toString())));
+            return resultFiles;
+        } catch (IOException e) {
+            return resultFiles;
+        }
+    }
+
+    public static void removeFileOrFolderWithAllInnerFiles(String folderStringPath) throws IOException {
+        if (!StringUtils.isEmpty(folderStringPath)) {
+            File file = new File(folderStringPath);
+            if (Files.isDirectory(file.toPath())) {
+                FileUtils.cleanDirectory(file);
+                Files.delete(file.toPath());
+            } else {
+                Files.delete(file.toPath());
+            }
+        }
+    }
+
+    public static String fixFileName(String fileName) {
+        String nameWithoutExtraSymbols = fileName.replaceAll("[|#$%&\'\"\\\\/\r\n\\[\\]*{}()^]+", "");
+        String fixedName = nameWithoutExtraSymbols.split("[\\d][\\d][\\d][\\d][-][\\d][\\d][-][\\d][\\d]")[0];
+        if (StringUtils.isEmpty(fixedName.trim())) {
+            String newIdPrefix = String.format("%s", DigestUtils.md5Hex(fileName.getBytes()));
+            return newIdPrefix + nameWithoutExtraSymbols;
+        } else {
+            return nameWithoutExtraSymbols;
+        }
     }
 }
