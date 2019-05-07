@@ -10,7 +10,6 @@ idea
 #another-files
 *.iml
 *.iws
-workspace.xml
 tasks.xml
 
 # Log file
