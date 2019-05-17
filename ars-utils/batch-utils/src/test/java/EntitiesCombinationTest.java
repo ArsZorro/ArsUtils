@@ -4,6 +4,5 @@ public class EntitiesCombinationTest {
 	@Test
 	public void comb() {
 		EntitiesCombinationTest combinationTest = new EntitiesCombinationTest();
-
 	}
 }

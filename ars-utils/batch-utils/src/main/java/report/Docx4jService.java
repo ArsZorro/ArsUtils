@@ -4,6 +4,7 @@ import java.io.*;
 
 import org.apache.commons.io.FilenameUtils;
 import org.docx4j.Docx4J;
+import org.docx4j.openpackaging.packages.SpreadsheetMLPackage;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 
 public class Docx4jService {
@@ -12,6 +13,15 @@ public class Docx4jService {
         try {
             WordprocessingMLPackage wordprocessingMLPackage = WordprocessingMLPackage.load(new File(path, fileName));
             Docx4J.save(wordprocessingMLPackage, new File(path, FilenameUtils.getBaseName(fileName) + System.currentTimeMillis() + ".xml"), Docx4J.FLAG_SAVE_FLAT_XML);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void convertXlsxFile(String path, String fileName) {
+        try {
+            SpreadsheetMLPackage pkg = SpreadsheetMLPackage.load(new File(path, fileName));
+            pkg.save(new File(path, FilenameUtils.getBaseName(fileName) + System.currentTimeMillis() + ".xml"), Docx4J.FLAG_SAVE_FLAT_XML);
         } catch (Exception e) {
             e.printStackTrace();
         }

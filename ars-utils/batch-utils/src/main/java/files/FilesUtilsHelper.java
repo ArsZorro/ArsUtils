@@ -3,6 +3,8 @@ package files;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.google.common.io.CharStreams;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -107,6 +109,25 @@ public class FilesUtilsHelper {
                 Files.delete(file.toPath());
             }
         }
+    }
+
+    private static List<File> getFilesRecurse(File dir, Pattern pattern, boolean rec, List<File> files) {
+        File[] arr$ = dir.listFiles();
+        int len$ = arr$.length;
+
+        for(int i$ = 0; i$ < len$; ++i$) {
+            File file = arr$[i$];
+            if (file.isDirectory() && rec) {
+                getFilesRecurse(file, pattern, rec, files);
+            } else {
+                Matcher m = pattern.matcher(file.getName());
+                if (m.find()) {
+                    files.add(file);
+                }
+            }
+        }
+
+        return files;
     }
 
     public static String fixFileName(String fileName) {
