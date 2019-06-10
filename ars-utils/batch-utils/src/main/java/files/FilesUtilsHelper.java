@@ -111,6 +111,22 @@ public class FilesUtilsHelper {
         }
     }
 
+    private void saveFiles(List<File> files, File directory) {
+        if (!directory.mkdirs() && !directory.exists()) {
+            throw new RuntimeException("Cannot Saving files arrays");
+        }
+
+        for (File file : files) {
+            File newFile = new File(directory.getAbsolutePath(), file.getName());
+            newFile.mkdir();
+            try {
+                FileUtils.copyFile(file, newFile);
+            } catch (IOException e) {
+                System.out.println("Unable to common files " + file.getName());
+            }
+        }
+    }
+
     private static List<File> getFilesRecurse(File dir, Pattern pattern, boolean rec, List<File> files) {
         File[] arr$ = dir.listFiles();
         int len$ = arr$.length;
