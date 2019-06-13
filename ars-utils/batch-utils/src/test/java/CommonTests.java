@@ -1,6 +1,11 @@
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.junit.Assert;
 import org.junit.Test;
 
 import files.FilesUtilsHelper;
@@ -22,6 +27,27 @@ public class CommonTests {
     public void testDeleteEndOfNumber() {
         String s = "  dsa 9.0 ";
         System.out.println(s.replaceAll("\\.0", ""));
+    }
+
+    @Test
+    public void tryParseAllNumbersTypes() {
+        try {
+            new BigDecimal("1.1".replaceAll(",", "."));
+        } catch (NumberFormatException e) {
+            System.out.println("Broken");
+        }
+    }
+
+    @Test
+    public void optionalTest() {
+        Assert.assertEquals(Optional.empty().orElse("EmptyValue"), "EmptyValue");
+    }
+
+    @Test
+    public void testDate() {
+        org.joda.time.format.DateTimeFormatter dtf = DateTimeFormat.forPattern("dd-MM-yyyy");
+        DateTime dateTime = dtf.parseDateTime("11-11-2011");
+        System.out.println(dateTime.getYear());
     }
 
     @Test
