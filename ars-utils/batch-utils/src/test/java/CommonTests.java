@@ -1,3 +1,4 @@
+import java.io.*;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
@@ -21,6 +22,12 @@ public class CommonTests {
     public void test2() throws Exception {
         String s = new SimpleDateFormat("dd.MM.yyyy hh:mm").format(new Date(1556571600000L));
         System.out.println(s);
+    }
+
+    @Test
+    public void testFiles() {
+        File file = new File("hello\\e.txt");
+        System.out.println(file.getAbsolutePath());
     }
 
     @Test
