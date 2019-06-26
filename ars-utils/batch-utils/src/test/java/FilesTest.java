@@ -1,7 +1,9 @@
+import java.io.File;
+import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+import files.TikaConverter;
 import org.junit.Test;
 
 import files.FilesUtilsHelper;
@@ -28,5 +30,12 @@ public class FilesTest {
         // System.out.println(date.getTime());
         // String dateS = new SimpleDateFormat("YYYY-MM-DD").format(date);
         // System.out.println();
+    }
+
+    @Test
+    public void testTikass() throws Exception {
+        TikaConverter tikaConverter = new TikaConverter();
+        String k = tikaConverter.process(new FileInputStream(new File("C:\\tests\\2in1_for_Alutech.pdf")), "pdf");
+        System.out.println();
     }
 }
