@@ -1,4 +1,7 @@
 package entities;
 
 public class Token {
-Integer start; Integer end;}
+    public Integer start;
+    public Integer end;
+    public String theme;
+}
