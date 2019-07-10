@@ -78,4 +78,10 @@ public class CommonTests {
         }
         System.out.println(velert.toString());
     }
+
+    @Test
+    public void testStringPosition() {
+        String s = "http://192.168.0.76:8080/Prairie/get/internet/all/msisdn:' 89210000112'/-/sms/json/-";
+        System.out.println(s.substring(58, s.length() - 1));
+    }
 }
