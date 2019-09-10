@@ -52,8 +52,7 @@ public class FilesTest {
 
     @Test
     public void testTikass() throws Exception {
-        TikaConverter tikaConverter = new TikaConverter();
-        String k = tikaConverter.process(new FileInputStream(new File("C:\\tests\\2in1_for_Alutech.pdf")), "pdf");
+        String k = TikaConverter.process(new FileInputStream(new File("C:\\tests\\2in1_for_Alutech.pdf")), "pdf");
         System.out.println();
     }
 }

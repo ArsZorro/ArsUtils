@@ -1,7 +1,6 @@
 package files;
 
 import java.io.*;
-import java.nio.file.Path;
 import java.util.*;
 
 import org.apache.log4j.Logger;
@@ -11,6 +10,7 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import org.apache.pdfbox.tools.imageio.ImageIOUtil;
+import org.apache.tika.exception.TikaException;
 import org.apache.tika.io.TikaInputStream;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.AutoDetectParser;
@@ -18,42 +18,45 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.ocr.TesseractOCRConfig;
 import org.apache.tika.sax.BodyContentHandler;
+import org.xml.sax.SAXException;
 
+@SuppressWarnings("AvoidModifiersForTypes")
 public class TikaConverter {
     private static Logger logger = Logger.getLogger(TikaConverter.class);
 
-    public static String process(Path file, String extension) {
-        try {
-            InputStream stream = new FileInputStream(file.toFile());
+    protected TikaConverter() {}
+
+    public static String process(File file, String extension) throws IOException {
+        try (InputStream stream = new FileInputStream(file)) {
             return process(stream, extension);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("Whoops, It seems to file not found");
         }
     }
 
+    @SuppressWarnings("MagicNumber")
     public static String process(InputStream stream, String extension) {
         Parser parser = new AutoDetectParser();
         BodyContentHandler handler = new BodyContentHandler(-1); // Unlimited writing (-1)!
         Metadata metadata = new Metadata();
 
-        // Note: the Excel datetime issue is really hard to solve
         ParseContext context = new ParseContext();
         context.set(Locale.class, Locale.forLanguageTag("rus"));
 
-        // Tesseract can work with two languages
         TesseractOCRConfig ocrConfig = new TesseractOCRConfig();
         ocrConfig.setLanguage("rus+eng");
         ocrConfig.setTimeout(300);
         context.set(TesseractOCRConfig.class, ocrConfig);
 
-        //Special parsing for all the PDFs
-        if (extension.matches("(?i)(pdf)")) {
+        byte[] byteArr = FilesUtilsHelper.getByteArrayFromStream(stream);
+        try (InputStream tikaStream = TikaInputStream.get(new ByteArrayInputStream(byteArr))) {
+            parser.parse(tikaStream, handler, metadata, context);
+        } catch (IOException | SAXException | TikaException e) {
+            logger.error(String.format("The main Tika says:%n%s", e));
+        }
 
-            // "Special" temp folder for PDFBox
+        if (extension.matches("(?i)(pdf)")) {
             System.setProperty("pdfbox.fontcache", System.getProperty("java.io.tmpdir"));
 
-            // For any first level images inside PDF file
-            try (PDDocument document = PDDocument.load(stream)) {
+            try (PDDocument document = PDDocument.load(new ByteArrayInputStream(byteArr))) {
                 for (PDPage page : document.getPages()) {
                     PDResources pdResources = page.getResources();
 
@@ -63,18 +66,19 @@ public class TikaConverter {
 
                             ByteArrayOutputStream imageOutputStream = new ByteArrayOutputStream();
                             ImageIOUtil.writeImage(img.getImage(), "jpg", imageOutputStream, 300);
+
                             try (InputStream tikaStream = TikaInputStream.get(new ByteArrayInputStream(imageOutputStream.toByteArray()))) {
                                 parser.parse(tikaStream, handler, metadata, context);
-                            } catch (Exception e) {
+                            } catch (IOException | SAXException | TikaException e) {
                                 logger.error(String.format("The Tika for PDFs says:%n%s", e));
                             }
                         }
                     }
                 }
-            } catch (Exception e) {
+            } catch (IOException e) {
                 logger.error(String.format("The PDF section in the TikaConverter says:%n%s", e));
             }
         }
-        return handler.toString();
+        return FilesUtilsHelper.prettifyNewLines(handler.toString());
     }
 }
