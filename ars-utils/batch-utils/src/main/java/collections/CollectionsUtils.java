@@ -1,7 +1,5 @@
 package collections;
 
-import entities.ThemeSentence;
-import entities.Token;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.*;
@@ -29,52 +27,119 @@ public class CollectionsUtils {
         return result;
     }
 
-    public static void walkSortedListsWithSettingParamsToValidPair(List<Token> tokens,
-                                                                   List<ThemeSentence> themeSentences) {
-        walkSortedListsWithSettingParamsToValidPair(
-                tokens,
-                themeSentences,
-                new PairValidator<Token, ThemeSentence>() {
-                    @Override
-                    public int isPairValid(Token token, ThemeSentence themeSentence) {
-                        if (token.end < themeSentence.start) {
-                            return -1;
-                        }
+//    public static void walkSortedListsWithSettingParamsToValidPair(List<Token> tokens,
+//                                                                   List<ThemeSentence> themeSentences) {
+//        walkSortedListsWithSettingParamsToValidPair(
+//                tokens,
+//                themeSentences,
+//                new PairValidator<Token, ThemeSentence>() {
+//                    @Override
+//                    public int isPairValid(Token token, ThemeSentence themeSentence) {
+//                        if (token.end < themeSentence.start) {
+//                            return -1;
+//                        }
+//
+//                        if (token.start >= themeSentence.start && token.start <= themeSentence.end) {
+//                            return 0;
+//                        }
+//
+//                        return 1;
+//                    }
+//                },
+//                new ValuesParamsSetter<Token, ThemeSentence>() {
+//                    @Override
+//                    public void setValuesParams(Token token, ThemeSentence themeSentence) {
+//                        token.theme = themeSentence.theme;
+//                    }
+//                });
+//    }
 
-                        if (token.start >= themeSentence.start && token.start <= themeSentence.end) {
-                            return 0;
-                        }
-
-                        return 1;
-                    }
-                },
-                new ValuesParamsSetter<Token, ThemeSentence>() {
-                    @Override
-                    public void setValuesParams(Token token, ThemeSentence themeSentence) {
-                        token.theme = themeSentence.theme;
-                    }
-                });
-    }
-
-    public static <T1, T2> void walkSortedListsWithSettingParamsToValidPair(List<T1> list1,
-                                                                            List<T2> list2,
-                                                                            PairValidator<T1, T2> pairValidator,
-                                                                            ValuesParamsSetter<T1, T2> paramsSetter) {
-        if (CollectionUtils.isEmpty(list1) || CollectionUtils.isEmpty(list2)) {
+    public static <T1, T2> void processComparableElementsInSortedLists(List<T1> firstList,
+                                                                       List<T2> secondList,
+                                                                       ListElementsProcessor<T1, T2> processor,
+                                                                       ListElementsComparator<T1, T2> comparator) {
+        if (CollectionUtils.isEmpty(firstList) || CollectionUtils.isEmpty(secondList)) {
             return;
         }
 
-        int counter1 = 0;
-        int counter2 = 0;
-        for (; counter1 < list1.size(); counter1++) {
-            T1 firstLevelT1 = list1.get(counter1);
-            T2 firstLevelT2 = list2.get(counter2);
-            if (pairValidator.isPairValid(firstLevelT1, firstLevelT2) < 0) {
-                setParamsOfAllValid(firstLevelT1, list2, counter2);
+        int firstMainCounter = 0;
+        int secondMainCounter = 0;
+
+        for (; firstMainCounter < firstList.size();) {
+            T1 firstElement = firstList.get(firstMainCounter);
+
+            for (int j2 = secondMainCounter; j2 < secondList.size(); j2++) {
+                T2 secondElement = secondList.get(j2);
+
+                int compareResult = comparator.compare(firstElement, secondElement);
+
+                if (isFirstElementLess(compareResult)) {
+//                    firstMainCounter++;
+                    break;
+                }
+
+                if (comparedElementsProcessable(compareResult)) {
+                    processor.process(firstElement, secondElement);
+//                    if (isFinalIteration(j2, secondList)) {
+//                        firstMainCounter++;
+//                    }
+                }
+
+                if (isFirstElementMore(compareResult)) {
+                    secondMainCounter++;
+//                    break;
+                }
             }
+
+            firstMainCounter++;
         }
     }
+
+    private static boolean isFirstElementLess(int compareResult) {
+        return compareResult < 0;
+    }
+
+    private static boolean comparedElementsProcessable(int compareResult) {
+        return compareResult == 0;
+    }
+
+    private static boolean isFirstElementMore(int compareResult) {
+        return compareResult > 0;
+    }
+
+    private static boolean isFinalIteration(int counter, List list) {
+        return counter == list.size() - 1;
+    }
+
+    public interface ListElementsProcessor<T1, T2>  {
+
+        void process(T1 element1, T2 element2);
+    }
+
+    public interface ListElementsComparator<T1, T2>  {
+        int compare(T1 element1, T2 element2);
+    }
+
+    //    public static <T1, T2> void walkSortedListsWithSettingParamsToValidPair(List<T1> list1,
+//                                                                            List<T2> list2,
+//                                                                            PairValidator<T1, T2> pairValidator,
+//                                                                            ValuesParamsSetter<T1, T2> paramsSetter) {
+//        if (CollectionUtils.isEmpty(list1) || CollectionUtils.isEmpty(list2)) {
+//            return;
+//        }
 //
+//        int counter1 = 0;
+//        int counter2 = 0;
+//        for (; counter1 < list1.size(); counter1++) {
+//            T1 firstLevelT1 = list1.get(counter1);
+//            T2 firstLevelT2 = list2.get(counter2);
+//            if (pairValidator.isPairValid(firstLevelT1, firstLevelT2) < 0) {
+//                setParamsOfAllValid(firstLevelT1, list2, counter2);
+//            }
+//        }
+//    }
+
+    //
 //    public static <T1, T2> void walkSortedListsWithSettingParamsToValidPair(List<T1> list1,
 //                                                                            List<T2> list2,
 //                                                                            PairValidator<T1, T2> pairValidator,
