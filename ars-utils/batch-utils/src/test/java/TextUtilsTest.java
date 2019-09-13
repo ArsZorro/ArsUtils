@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -57,6 +60,25 @@ public class TextUtilsTest {
                                                                         + "текст 3 \n", text);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    @Test
+    public void duplicateExcelFile() {
+        File oldFile = new File("");
+        File newFile = new File("");
+        try {
+            Workbook oldWB = new XSSFWorkbook(new FileInputStream(oldFile));
+            for (int i = 0; i < oldWB.getNumberOfSheets(); i++) {
+                XSSFSheet sheetFromOldWB = (XSSFSheet) oldWB.getSheetAt(i);
+                sheetFromOldWB.disableLocking();
+            }
+            FileOutputStream fileOut = new FileOutputStream(newFile);
+            oldWB.write(fileOut);
+            oldWB.close();
+            fileOut.close();
+        } catch (IOException ignore) {
+            //ignore
         }
     }
 }
