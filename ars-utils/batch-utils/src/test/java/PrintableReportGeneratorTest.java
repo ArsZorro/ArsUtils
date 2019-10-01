@@ -1,10 +1,15 @@
 import java.io.*;
 
+import it.unimi.dsi.fastutil.chars.CharSets;
+import org.apache.commons.compress.utils.Charsets;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.docx4j.Docx4J;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
+import org.docx4j.openpackaging.parts.WordprocessingML.AltChunkType;
+import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -353,5 +358,30 @@ public class PrintableReportGeneratorTest {
 
     private String getFilePath(String fileName, String extension) {
         return printableReportDirectory + File.separator + fileName + testRunningTime + extension;
+    }
+
+    @Test
+    public void te() throws Exception {
+        WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.createPackage();
+        MainDocumentPart mdp = wordMLPackage.getMainDocumentPart();
+
+//        mdp.addParagraphOfText("Paragraph 1");
+
+        // Add the XHTML altChunk
+        File file = new File("C:\\projects\\ArsUtils\\ars-utils\\batch-utils\\src\\test\\resources\\report\\widget.html");
+        String s = FileUtils.readFileToString(file, "windows-1251");
+//        String xhtml = "<html><head><title>Import me</title></head><body><p>Hello World!</p></body></html>";
+        mdp.addAltChunk(AltChunkType.Xhtml, s.getBytes());
+
+        mdp.addParagraphOfText("Paragraph 3");
+
+        // Round trip
+        WordprocessingMLPackage pkgOut = mdp.convertAltChunks();
+
+//        // Display result
+//        System.out.println(
+//                XmlUtils.marshaltoString(pkgOut.getMainDocumentPart().getJaxbElement(), true, true));
+
+        pkgOut.save(new java.io.File(System.getProperty("user.dir") + "/Desktop/" + System.currentTimeMillis() + "html_2_doc.docx"));
     }
 }

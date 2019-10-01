@@ -54,6 +54,8 @@ public class CollectionsUtils {
 //                });
 //    }
 
+    //Идея в том, чтобы пройтись по каждому листу только один раз,
+    //оба листа должны быть отсортированы по одинаковому критерию
     public static <T1, T2> void processComparableElementsInSortedLists(List<T1> firstList,
                                                                        List<T2> secondList,
                                                                        ListElementsProcessor<T1, T2> processor,
@@ -74,20 +76,15 @@ public class CollectionsUtils {
                 int compareResult = comparator.compare(firstElement, secondElement);
 
                 if (isFirstElementLess(compareResult)) {
-//                    firstMainCounter++;
                     break;
                 }
 
-                if (comparedElementsProcessable(compareResult)) {
+                if (comparedElementsAreProcessable(compareResult)) {
                     processor.process(firstElement, secondElement);
-//                    if (isFinalIteration(j2, secondList)) {
-//                        firstMainCounter++;
-//                    }
                 }
 
                 if (isFirstElementMore(compareResult)) {
                     secondMainCounter++;
-//                    break;
                 }
             }
 
@@ -99,7 +96,7 @@ public class CollectionsUtils {
         return compareResult < 0;
     }
 
-    private static boolean comparedElementsProcessable(int compareResult) {
+    private static boolean comparedElementsAreProcessable(int compareResult) {
         return compareResult == 0;
     }
 
@@ -112,12 +109,11 @@ public class CollectionsUtils {
     }
 
     public interface ListElementsProcessor<T1, T2>  {
-
-        void process(T1 element1, T2 element2);
+        void process(T1 firstElement, T2 secondElement);
     }
 
     public interface ListElementsComparator<T1, T2>  {
-        int compare(T1 element1, T2 element2);
+        int compare(T1 firstElement, T2 secondElement);
     }
 
     //    public static <T1, T2> void walkSortedListsWithSettingParamsToValidPair(List<T1> list1,
