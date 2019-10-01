@@ -1,21 +1,35 @@
 package files;
 
 import java.io.*;
+import java.net.*;
 import java.nio.file.Files;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import com.google.common.io.CharStreams;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.io.Charsets;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.filefilter.FileFileFilter;
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.StopWatch;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 
+import collections.CollectionsUtils;
+import table.ExcelUtils;
+
 public class FilesUtilsHelper {
+    private static final Integer DEFAULT_BYTES_SIZE = 1024;
+    private static final Integer DEFAULT_MAX_SUITABLE_NODE_TEXT_LENGTH = 3_000_000;
+    private static final Integer DEFAULT_MAX_SUITABLE_NODE_TEXT_LINE_LENGTH = 50_000;
+
     public void createManyBigFiles(String path, String incomingFile, String resultFile, int startRowPosition, int maxLinesCounter) throws Exception {
         List<String> lines = FileUtils.readLines(
             new File(path + "\\" + incomingFile));
@@ -155,5 +169,235 @@ public class FilesUtilsHelper {
         } else {
             return nameWithoutExtraSymbols;
         }
+    }
+
+    public static List<File> listFilesFromFolder(File folder) {
+        List<File> resultFiles = new ArrayList<>();
+        try {
+            Files.walk(folder.toPath())
+                 .filter(path -> !Files.isDirectory(path))
+                 .forEach(path -> resultFiles.add(new File(path.toString())));
+            return resultFiles;
+        } catch (IOException e) {
+            return resultFiles;
+        }
+    }
+
+    public static void saveFile(File fileTo, InputStream streamFrom) {
+        final int bufferSize = 4096;
+        try (FileOutputStream outputStream = new FileOutputStream(fileTo)) {
+            byte[] buffer = new byte[bufferSize];
+            int bytesRead;
+            while ((bytesRead = streamFrom.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+            outputStream.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static List<File> getFilesWithExtension(File directory, String extension) {
+        if (directory == null || !directory.isDirectory() || (!directory.exists() && !directory.mkdir())) {
+            return Collections.emptyList();
+        }
+
+        return Arrays.stream(Objects.requireNonNull(directory.listFiles()))
+                     .filter(file -> FilenameUtils.isExtension(file.getAbsolutePath(), extension))
+                     .collect(Collectors.toList());
+    }
+
+    @SuppressWarnings("MagicNumber")
+    public static byte[] getByteArrayFromStream(InputStream stream) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        byte[] buffer = new byte[DEFAULT_BYTES_SIZE];
+        int len;
+        try {
+            while ((len = stream.read(buffer)) > -1) {
+                baos.write(buffer, 0, len);
+            }
+            baos.flush();
+        } catch (IOException e) {
+            return new byte[0];
+        }
+
+        return baos.toByteArray();
+    }
+
+    public static void copyResourceDirectoryToDestinationDirectory(String resourcePath, String destinationPath) throws IOException {
+        Collection<File> listFilesAndDirsFromResources = getListFilesAndDirsFromResources(resourcePath);
+
+        if (CollectionUtils.isEmpty(listFilesAndDirsFromResources)) {
+            return;
+        }
+
+        File destinationFile = new File(destinationPath);
+        if (!destinationFile.exists() && !destinationFile.mkdirs()) {
+            return;
+        }
+
+        FileUtils.copyDirectory(listFilesAndDirsFromResources.iterator().next(), destinationFile);
+    }
+
+    public static Collection<File> getListFilesAndDirsFromResources(String directory) {
+        try {
+            String path = getAbsolutePathForResourceDirectory(directory);
+            return FileUtils.listFilesAndDirs(new File(path), FileFileFilter.FILE, FileFileFilter.FILE);
+        } catch (IOException ignore) {
+            return Collections.emptyList();
+        }
+    }
+
+    public static String getAbsolutePathForResourceDirectory(String directory) throws IOException {
+        URL url = getClassPathResource(directory).getURL();
+        return url.getPath();
+    }
+
+    public static File getCoreResourceFile(String resourcePath) {
+        try {
+            return getClassPathResource(resourcePath).getFile();
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    public static Resource getClassPathResource(String resourcePath) {
+        return new DefaultResourceLoader().getResource("classpath:" + resourcePath);
+    }
+
+    public static String generateRandomDirectoryName() {
+        Integer randomInt = RandomUtils.nextInt();
+        return org.springframework.util.DigestUtils.md5DigestAsHex(randomInt.toString().getBytes());
+    }
+
+    public static File mkdirsIfNotExist(String directoriesPath) {
+        File directory = new File(directoriesPath);
+        if (!directory.exists() && !directory.mkdirs()) {
+            throw new RuntimeException("Unable to create directory: " + directoriesPath);
+        }
+        return directory;
+    }
+
+    public static List<File> getAllFilesWithAwaitingForEachFile(File directoryToSearch, int expectedFilesCount, Long timeAwaiting) {
+        List<File> foundedFiles = new ArrayList<>();
+        for (int i = 0; i < expectedFilesCount;) {
+            List<File> newFiles = getNewFilesOrFinishByTimeout(foundedFiles, directoryToSearch, timeAwaiting);
+            if (CollectionUtils.isEmpty(newFiles)) {
+                i++;
+            } else {
+                foundedFiles.addAll(newFiles);
+                i += newFiles.size();
+            }
+        }
+        return foundedFiles;
+    }
+
+    public static List<File> getNewFilesOrFinishByTimeout(List<File> oldFiles, File reportDirectory, Long timeAwaiting) {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+
+        List<File> foundedFiles = Collections.emptyList();
+        while (stopWatch.getTime() < timeAwaiting) {
+            foundedFiles = listFilesFromFolder(reportDirectory);
+
+            if (foundedFiles.size() > oldFiles.size()) {
+                break;
+            }
+        }
+
+        if (foundedFiles.size() > oldFiles.size()) {
+            return getNewFiles(oldFiles, foundedFiles);
+        } else {
+            return Collections.emptyList();
+        }
+    }
+
+    public static List<File> getNewFiles(List<File> oldFiles, List<File> foundedFiles) {
+        Map<String, File> oldFilesAbsolutePath2File = buildAbsolutePath2File(oldFiles);
+        Map<String, File> foundedFilesAbsolutePath2File = buildAbsolutePath2File(foundedFiles);
+
+        Set<String> newFilePaths = foundedFilesAbsolutePath2File.keySet();
+        newFilePaths.removeAll(oldFilesAbsolutePath2File.keySet());
+
+        if (CollectionUtils.isNotEmpty(newFilePaths)) {
+            return CollectionsUtils.getValuesByKeys(foundedFilesAbsolutePath2File, newFilePaths);
+        } else {
+            return Collections.emptyList();
+        }
+    }
+
+    public static Map<String, File> buildAbsolutePath2File(List<File> files) {
+        Map<String, File> absolutePath2File = new HashMap<>();
+        for (File file : files) {
+            absolutePath2File.put(file.getAbsolutePath(), file);
+        }
+        return absolutePath2File;
+    }
+
+    public static String prettifyNewLines(String text) {
+        return defaultNewLines(text).replaceAll("\n\n", "");
+    }
+
+    public static String defaultNewLines(String text) {
+        return text.replaceAll("\r\n", "\n");
+    }
+
+    public static String[] getFullFileTextAndNodeText(File inputFile) throws IOException {
+        String fileText = getFileTextByExtension(inputFile);
+        String nodeText = getNodeText(fileText);
+        return new String[] {fileText, nodeText};
+    }
+
+    public static String getFileTextByExtension(File inputFile) throws IOException {
+        String text;
+        String extension = FilenameUtils.getExtension(inputFile.toString()).toLowerCase();
+
+        switch (extension) {
+            case "txt" :
+                text = FileUtils.readFileToString(inputFile, EncodingUtils.detectEncoding(inputFile.toString()));
+                break;
+            case "xlsx" :
+            case "xls" :
+            case "xlsm" :
+            case "xlt" :
+            case "xltm" :
+                text = ExcelUtils.getText(inputFile);
+                break;
+            default :
+                text = TikaConverter.process(inputFile, extension);
+                break;
+        }
+
+        return text;
+    }
+
+    private static String getNodeText(String inputText) {
+        String nodeText = inputText;
+        if (nodeText.trim().isEmpty()) {
+            nodeText = "Пустой текстовый файл или ошибка распознавания изображений или чтения файла.\n"
+                       + "Текст можно добавить вручную, ссылка на исходный файл ниже.";
+        } else if (nodeText.length() > DEFAULT_MAX_SUITABLE_NODE_TEXT_LENGTH + 1) {
+            nodeText = nodeText.substring(0, DEFAULT_MAX_SUITABLE_NODE_TEXT_LENGTH) + "\n\nДлина текста была более 3 миллионов знаков.\n"
+                       + "Оставшаяся часть документа обрезана. Вы можете добавить её вручную.\n";
+        } else {
+            String[] lines = nodeText.split("\n");
+            int num = 0;
+            boolean cut = false;
+            for (String line : lines) {
+                if (line.length() > DEFAULT_MAX_SUITABLE_NODE_TEXT_LINE_LENGTH + 1) {
+                    lines[num] = line.substring(0, DEFAULT_MAX_SUITABLE_NODE_TEXT_LINE_LENGTH) + " --- Строка длиннее 50000 знаков была обрезана. "
+                                 + "Вы можете добавить тект вручную.";
+                    cut = true;
+                }
+                num++;
+            }
+            if (cut) {
+                nodeText = "";
+                for (String line : lines) {
+                    nodeText += line + "\n";
+                }
+            }
+        }
+        return nodeText;
     }
 }

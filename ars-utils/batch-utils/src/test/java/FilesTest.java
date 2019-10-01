@@ -1,9 +1,11 @@
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 import files.TikaConverter;
+import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import files.FilesUtilsHelper;
@@ -33,9 +35,24 @@ public class FilesTest {
     }
 
     @Test
+    public void searchFilesWithText() {
+        String regex = "Работа, подтвержденная свидетельскими показаниям";
+        List<File> files = FilesUtilsHelper.listFilesForFolder(new File("C:\\Users\\User\\Desktop\\tests"));
+        for (File file : files) {
+            try {
+                String txt = FileUtils.readFileToString(file);
+                if (txt.split(regex).length > 1 || txt.toUpperCase().contains(regex.toUpperCase())) {
+                    System.out.println("Matched file: " + file.getAbsolutePath());
+                }
+            } catch (Exception e) {
+                System.out.println("Exception on file:" + file.getAbsolutePath() + "\n\n" + e + "\n   -----------     ");
+            }
+        }
+    }
+
+    @Test
     public void testTikass() throws Exception {
-        TikaConverter tikaConverter = new TikaConverter();
-        String k = tikaConverter.process(new FileInputStream(new File("C:\\tests\\2in1_for_Alutech.pdf")), "pdf");
+        String k = TikaConverter.process(new FileInputStream(new File("C:\\tests\\2in1_for_Alutech.pdf")), "pdf");
         System.out.println();
     }
 }

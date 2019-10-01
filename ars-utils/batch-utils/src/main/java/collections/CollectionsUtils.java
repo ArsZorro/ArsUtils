@@ -169,4 +169,15 @@ public class CollectionsUtils {
     public static abstract class ValuesParamsSetter <T1, T2> {
         public abstract void setValuesParams(T1 value1, T2 value2);
     }
+
+    public static <K, V> List<V> getValuesByKeys(Map<K, V> map, Set<K> keys) {
+        List<V> values = new ArrayList<>();
+        for (K key : keys) {
+            V value = map.get(key);
+            if (value != null) {
+                values.add(value);
+            }
+        }
+        return values;
+    }
 }
