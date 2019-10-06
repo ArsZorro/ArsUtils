@@ -16,6 +16,7 @@ public class TextExtractionStore {
     public Map<MetaType, Object> inputMeta;
 
     public Map<String, TokenExtractorResult> extractorName2Result = new HashMap<>();
+    public Map<TokenExtractorType, TokenExtractorResult> extractorType2Result = new HashMap<>();
     public Graph<Token, TokenEdge> graph = new SimpleDirectedGraph<>(TokenEdge.class);
     public Map<TokenEntityType, List<Token>> entityType2Tokens = new HashMap<>();
 

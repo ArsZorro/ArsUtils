@@ -11,14 +11,14 @@ import factograph.text.strategy.steps.selectors.TokenSelector;
 import factograph.text.strategy.steps.selectors.TokenSelectorResult;
 import factograph.text.strategy.steps.selectors.filters.TokenSelectionFilter;
 import strategy.steps.ExtractionStep;
-import strategy.steps.TokenSelectorStep;
+import strategy.steps.SelectorStep;
 import strategy.steps.selectors.TokenSelector;
-import strategy.steps.selectors.TokenSelectorResult;
+import strategy.steps.selectors.result.SelectorResult;
 import strategy.steps.selectors.filters.TokenSelectionFilter;
 
 public class TextExtractionStrategy {
     public List<ExtractionStep> steps;
-    private Map<String, TokenSelectorResult> selectionHistory = new HashMap<>();
+    private Map<String, SelectorResult> selectionHistory = new HashMap<>();
 
     public TextExtractionStrategy() {
         this(new ArrayList<>());
@@ -30,10 +30,10 @@ public class TextExtractionStrategy {
 
     public TextExtractionStore execute(TextExtractionStore store) {
         for (ExtractionStep extractionStep : steps) {
-            if (extractionStep instanceof TokenSelectorStep) {
-                TokenSelectorStep selectorStep = (TokenSelectorStep) extractionStep;
+            if (extractionStep instanceof SelectorStep) {
+                SelectorStep selectorStep = (SelectorStep) extractionStep;
 
-                TokenSelectorResult selectionResult = new TokenSelectorResult();
+                SelectorResult selectionResult = new SelectorResult();
                 for (TokenSelector selector : selectorStep.selectors) {
                     Preconditions.checkArgument(CollectionUtils.isNotEmpty(selector.filters) || selectionHistory.containsKey(selector.name),
                         "In selection history was no selection with name:" + selector.name);
@@ -42,7 +42,7 @@ public class TextExtractionStrategy {
                     }
                 }
 
-                TokenSelectorResult selectionResult = null;
+                SelectorResult selectionResult = null;
                 for (TokenSelector selector : currentSelectors) {
                     if (selectionResult == null) {
                         selectionResult = selector.select(store);
@@ -59,6 +59,6 @@ public class TextExtractionStrategy {
     }
 
     public interface SelectWithHistory {
-        TokenSelectorResult withHistory(TokenSelector selector);
+        SelectorResult withHistory(TokenSelector selector);
     }
 }
