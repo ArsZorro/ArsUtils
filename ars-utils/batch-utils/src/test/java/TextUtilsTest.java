@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -80,5 +81,38 @@ public class TextUtilsTest {
         } catch (IOException ignore) {
             //ignore
         }
+    }
+
+    @Test
+    public void getAddresses() throws Exception {
+        File file = new File("C:\\Users\\User\\Desktop\\TESTS\\Каналы РТКомм за март 2019.csv");
+        List<String> lines = FileUtils.readLines(file, "MACCYRILLIC");
+        StringBuilder addresses = new StringBuilder();
+        for (String line : lines) {
+            String[] cells = line.split(";");
+            int i = 0;
+            for (String cell : cells) {
+                if (i == 14) {
+                    addresses.append(cell).append("\n");
+                }
+                i++;
+            }
+        }
+        FileWriter fileWriter = new FileWriter(new File("C:\\Users\\User\\Desktop\\TESTS\\" + System.currentTimeMillis() + ".csv"));
+        fileWriter.append(addresses);
+        fileWriter.flush();
+        System.out.println(addresses);
+    }
+
+    @Test
+    public void test2() {
+        EEEEEE eeeeee = EEEEEE.E_1;
+        EEEEEE eeeeee1 = EEEEEE.E_1;
+        System.out.println(eeeeee == eeeeee1);
+    }
+
+    public enum EEEEEE {
+        E_1,
+        E_2
     }
 }
