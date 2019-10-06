@@ -4,6 +4,7 @@ import collections.support.PairValidator;
 import collections.support.ValuesParamsSetter;
 import entities.ThemeSentence;
 import entities.Token;
+import org.junit.Assert;
 import org.junit.Test;
 
 import collections.CollectionsUtils;
@@ -18,7 +19,7 @@ public class CollectionsTest {
     }
 
     @Test
-    public void testWalkCollections() {
+    public void simpleSituation() {
         List<Token> tokens = Arrays.asList(
                 buildToken(2, 5),
                 buildToken(7, 8),
@@ -28,48 +29,13 @@ public class CollectionsTest {
                 new ThemeSentence(1, 6, "Theme1"),
                 new ThemeSentence(7, 12, "Theme2"));
 
-        CollectionsUtils.processComparableElementsInSortedLists(
-                tokens,
-                themeSentences,
-                (t1, s2) -> t1.theme = s2.theme,
-                (token, sentence) -> {
-                    if (token.end < sentence.start) {
-                        return -1;
-                    }
-                    if (token.end >= sentence.start && token.start <= sentence.end) {
-                        return  0;
-                    }
-                    if (token.start > sentence.end) {
-                        return 1;
-                    }
+        process(tokens, themeSentences);
 
-                    return -1;
-                });
-        System.out.println();
-//        CollectionsUtils.walkSortedListsWithSettingParamsToValidPair(
-//                tokens,
-//                themeSentences,
-//                new PairValidator<Token, ThemeSentence>() {
-//                    @Override
-//                    public boolean isPairValid(Token token, ThemeSentence themeSentence) {
-//                        return token.start <= themeSentence.end && token.end >= themeSentence.start;
-//                    }
-//                },
-//                new ValuesParamsSetter<Token, ThemeSentence>() {
-//                    @Override
-//                    public void setValuesParams(Token token, ThemeSentence themeSentence) {
-//                        token.theme = themeSentence.theme;
-//                    }
-//                });
-        System.out.println();
+        Assert.assertEquals(tokens.get(0).theme, "Theme1");
+        Assert.assertEquals(tokens.get(1).theme, "Theme2");
+        Assert.assertEquals(tokens.get(2).theme, "Theme2");
     }
 
-    private Token buildToken(int start, int end) {
-        Token token = new Token();
-        token.start = start;
-        token.end = end;
-        return token;
-    }
 
     //todo переименовать в tokensprovider getGraphTokenProperties
 
@@ -84,26 +50,10 @@ public class CollectionsTest {
                 new ThemeSentence(2, 2, "Theme1"),
                 new ThemeSentence(2, 2, "Theme2"));
 
-        CollectionsUtils.processComparableElementsInSortedLists(
-                tokens,
-                themeSentences,
-                (t1, s2) -> t1.theme = s2.theme,
-                (token, sentence) -> {
-                    if (token.end < sentence.start) {
-                        return -1;
-                    }
-                    if (token.end >= sentence.start && token.start <= sentence.end) {
-                        return 0;
-                    }
-                    if (token.start > sentence.end) {
-                        return 1;
-                    }
+        process(tokens, themeSentences);
 
-                    return -1;
-                });
-        System.out.println();
+        tokens.forEach(t -> Assert.assertEquals(t.theme, "Theme2"));
     }
-
 
     @Test
     public void testWalkCollectionsAllNotProcessed() {
@@ -116,6 +66,14 @@ public class CollectionsTest {
                 new ThemeSentence(2, 2, "Theme1"),
                 new ThemeSentence(2, 2, "Theme2"));
 
+        process(tokens, themeSentences);
+
+        Assert.assertNull(tokens.get(0).theme);
+        Assert.assertNull(tokens.get(1).theme);
+        Assert.assertNull(tokens.get(2).theme);
+    }
+
+    private void process(List<Token> tokens, List<ThemeSentence> themeSentences) {
         CollectionsUtils.processComparableElementsInSortedLists(
                 tokens,
                 themeSentences,
@@ -124,15 +82,18 @@ public class CollectionsTest {
                     if (token.end < sentence.start) {
                         return -1;
                     }
-                    if (token.end >= sentence.start && token.start <= sentence.end) {
-                        return 0;
-                    }
-                    if (token.start > sentence.end) {
-                        return 1;
+                    if (token.start <= sentence.end) {
+                        return  0;
                     }
 
-                    return -1;
+                    return 1;
                 });
-        System.out.println();
+    }
+
+    private Token buildToken(int start, int end) {
+        Token token = new Token();
+        token.start = start;
+        token.end = end;
+        return token;
     }
 }

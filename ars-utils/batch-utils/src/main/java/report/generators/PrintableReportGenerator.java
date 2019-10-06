@@ -24,7 +24,7 @@ import org.docx4j.Docx4J;
 import org.docx4j.Docx4jProperties;
 import org.docx4j.XmlUtils;
 import org.docx4j.convert.in.xhtml.XHTMLImporter;
-import org.docx4j.convert.in.xhtml.XHTMLImporterImpl;
+//import org.docx4j.convert.in.xhtml.XHTMLImporterImpl;
 import org.docx4j.dml.CTPositiveSize2D;
 import org.docx4j.dml.wordprocessingDrawing.Inline;
 import org.docx4j.jaxb.Context;
@@ -355,19 +355,19 @@ public class PrintableReportGenerator {
                 // // pri = TikaConverter.processHTML(new StringInputStream(pri, "WINDOWS-1251"));
                 //
 
-                XHTMLImporterImpl xhtmlImporter = new XHTMLImporterImpl(wordMLPackage);
-                xhtmlImporter.setHyperlinkStyle("Hyperlink");
-
-                AlternativeFormatInputPart afiPart = new AlternativeFormatInputPart(new PartName("/hw.html"));
-                afiPart.setBinaryData(pri.getBytes(W_1));
-                afiPart.setContentType(new ContentType("text/html"));
-                Relationship altChunkRel = wordMLPackage.getMainDocumentPart().addTargetPart(afiPart);
-
-                CTAltChunk ac = Context.getWmlObjectFactory().createCTAltChunk();
-                ac.setId(altChunkRel.getId());
-                wordMLPackage.getMainDocumentPart().addObject(ac);
-
-                wordMLPackage.getContentTypeManager().addDefaultContentType("html", "text/html;charset=UTF_8");
+//                XHTMLImporterImpl xhtmlImporter = new XHTMLImporterImpl(wordMLPackage);
+//                xhtmlImporter.setHyperlinkStyle("Hyperlink");
+//
+//                AlternativeFormatInputPart afiPart = new AlternativeFormatInputPart(new PartName("/hw.html"));
+//                afiPart.setBinaryData(pri.getBytes(W_1));
+//                afiPart.setContentType(new ContentType("text/html"));
+//                Relationship altChunkRel = wordMLPackage.getMainDocumentPart().addTargetPart(afiPart);
+//
+//                CTAltChunk ac = Context.getWmlObjectFactory().createCTAltChunk();
+//                ac.setId(altChunkRel.getId());
+//                wordMLPackage.getMainDocumentPart().addObject(ac);
+//
+//                wordMLPackage.getContentTypeManager().addDefaultContentType("html", "text/html;charset=UTF_8");
             }
         }
     }
