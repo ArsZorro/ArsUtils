@@ -209,7 +209,7 @@ public class CommonTests {
         // for (String str : strBuilder.toString().split("\n")) {
         //     messages.add(str);
         // }
-        messages = splitByLength(strBuilder.toString(), 100);
+        messages = splitByLength(strBuilder.toString(), 300);
 
         int couter = 0;
         for (String message : messages) {
