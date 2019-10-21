@@ -198,7 +198,7 @@ public class CommonTests {
 
     @Test
     public void neFileToMany() throws Exception {
-        String directory = "C:\\Users\\User\\Desktop\\TESTS\\INPUT";
+        String directory = "C:\\Users\\User\\Desktop\\Архив по работе\\Сущности Из Текста\\INPUT\\Все книги";
         List<File> files = new ArrayList<>(FileUtils.listFiles(new File(directory), FileFileFilter.FILE, FileFileFilter.FILE));
         StrBuilder strBuilder = new StrBuilder();
         for (File file : files) {
@@ -209,7 +209,7 @@ public class CommonTests {
         // for (String str : strBuilder.toString().split("\n")) {
         //     messages.add(str);
         // }
-        messages = splitByLength(strBuilder.toString(), 300);
+        messages = splitByLength(strBuilder.toString(), 1000);
 
         int couter = 0;
         for (String message : messages) {
