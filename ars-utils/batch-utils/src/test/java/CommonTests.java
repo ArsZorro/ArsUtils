@@ -1,19 +1,23 @@
 import java.io.*;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.google.common.collect.Sets;
+import org.apache.commons.io.Charsets;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.FileFileFilter;
+import org.apache.commons.lang.text.StrBuilder;
 import org.apache.commons.lang3.time.StopWatch;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.junit.Assert;
 import org.junit.Test;
 
-import files.FilesUtilsHelper;
+import utils.FileUtilsHelper;
+import utils.TikaConverter;
 
 public class CommonTests {
     @Test
@@ -63,7 +67,7 @@ public class CommonTests {
 
     @Test
     public void te() throws Exception {
-        String sss = FilesUtilsHelper.getStringFromClassPathFile("inputFile");
+        String sss = FileUtilsHelper.getStringFromClassPathFile("inputFile");
         String s = sss.split("=")[0];
         String[] ss = s.split("[.]");
         StringBuilder velert = new StringBuilder();
@@ -157,7 +161,7 @@ public class CommonTests {
         //               + "    IDADDRESS";
         // Set<String> lines = Sets.newHashSet(text.split("\n"));
 
-        List<String> lines = FilesUtilsHelper.readLinesFromResource("testLines.txt");
+        List<String> lines = FileUtilsHelper.readLinesFromResource("testLines.txt");
         for (String line :lines)
         {
             line = line.trim().replaceAll(",", "");
@@ -175,5 +179,55 @@ public class CommonTests {
             }
             System.out.println(nameBuilder.toString());
         }
+    }
+
+    @Test
+    public void concatFilesIntoOne() throws Exception {
+        String directory = "C:\\Users\\User\\Desktop\\Архив по работе\\Сущности Из Текста Извлечение сущностей\\Книги";
+        List<File> files = new ArrayList<>(FileUtils.listFiles(new File(directory), FileFileFilter.FILE, FileFileFilter.FILE));
+        StrBuilder strBuilder = new StrBuilder();
+        for (File file : files) {
+            strBuilder.append(FileUtilsHelper.readFileByExtension(file));
+        }
+
+        FileUtils.write(
+            new File("C:\\Users\\User\\Desktop\\TESTS\\" + System.currentTimeMillis() + "_test.txt"),
+            strBuilder.toString(),
+            Charsets.UTF_8);
+    }
+
+    @Test
+    public void neFileToMany() throws Exception {
+        String directory = "C:\\Users\\User\\Desktop\\TESTS\\INPUT";
+        List<File> files = new ArrayList<>(FileUtils.listFiles(new File(directory), FileFileFilter.FILE, FileFileFilter.FILE));
+        StrBuilder strBuilder = new StrBuilder();
+        for (File file : files) {
+            strBuilder.append(FileUtilsHelper.readFileByExtension(file));
+        }
+
+        List<String> messages = new ArrayList<>();
+        // for (String str : strBuilder.toString().split("\n")) {
+        //     messages.add(str);
+        // }
+        messages = splitByLength(strBuilder.toString(), 100);
+
+        int couter = 0;
+        for (String message : messages) {
+            FileUtils.write(
+                new File("C:\\Users\\User\\Desktop\\TESTS\\OUTPUT\\" + couter + "_" + System.currentTimeMillis() + "_message.txt"),
+                message,
+                Charsets.UTF_8);
+            couter++;
+        }
+    }
+
+    private static List<String> splitByLength(String text, int neededLength) {
+        List<String> parts = new ArrayList<>();
+
+        int length = text.length();
+        for (int i = 0; i < length; i += neededLength) {
+            parts.add(text.substring(i, Math.min(length, i + neededLength)));
+        }
+        return parts;
     }
 }

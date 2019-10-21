@@ -1,26 +1,4 @@
-
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.*;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.openxml4j.opc.OPCPackage;
-import org.apache.poi.poifs.filesystem.DocumentFactoryHelper;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.Resource;
-
-import files.FilesUtilsHelper;
+import utils.FileUtilsHelper;
 
 public class SimpleExcelConverter {
 //     public enum TableHeaderPosition {
@@ -81,13 +59,13 @@ public class SimpleExcelConverter {
 //     private Collection<ExcelTableConverter> buildDefaultTableConverters() {
 //         List<ExcelTableConverter> tableConverters = new ArrayList<>();
 //         try {
-//             tableConverters.add(new ExcelTableConverter(FilesUtilsHelper.readLinesFromResource("converters/addressesDetectionStrings.txt"),
+//             tableConverters.add(new ExcelTableConverter(FileUtilsHelper.readLinesFromResource("converters/addressesDetectionStrings.txt"),
 //                 new ExcelCellsConcatinator("###", null, true, true),
 //                 TableHeaderPosition.BOTTOM,
 //                 2,
 //                 2,
 //                 DEFAULT_CELL_DELIMITER));
-//             tableConverters.add(new ExcelTableConverter(FilesUtilsHelper.readLinesFromResource("converters/innDetectionStrings.txt"),
+//             tableConverters.add(new ExcelTableConverter(FileUtilsHelper.readLinesFromResource("converters/innDetectionStrings.txt"),
 //                 new ExcelCellsConcatinator(", ", ": ", true, true),
 //                 TableHeaderPosition.TOP,
 //                 1,

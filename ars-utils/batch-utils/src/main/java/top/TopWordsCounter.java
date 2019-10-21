@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import files.FilesUtilsHelper;
+import utils.FileUtilsHelper;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.shingle.ShingleFilter;
@@ -29,7 +29,7 @@ public class TopWordsCounter {
         try {
             if (defaultStopWords == null) {
                 defaultStopWords = new HashSet<>();
-                List<String> lines = FilesUtilsHelper.readLinesFromResource("dictionaries/stop_words.txt");
+                List<String> lines = FileUtilsHelper.readLinesFromResource("dictionaries/stop_words.txt");
                 defaultStopWords.addAll(lines);
             }
 

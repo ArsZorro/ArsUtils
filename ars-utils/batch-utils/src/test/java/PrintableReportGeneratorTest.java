@@ -40,7 +40,7 @@ public class PrintableReportGeneratorTest {
 
     private String getImageDirectory(String pngFileName) {
 //        try {
-////            return FilesUtilsHelper.getAbsolutePathForResourceDirectory("report/" + pngFileName);
+////            return FileUtilsHelper.getAbsolutePathForResourceDirectory("report/" + pngFileName);
 //        } catch (IOException e) {
 //            return "";
 //        }
@@ -327,7 +327,7 @@ public class PrintableReportGeneratorTest {
 
     private void prepareReportData(String reportFileAndDirectoryName) throws IOException {
         String processedDirectoryPath = getReportInnerDirectoryPath(reportFileAndDirectoryName);
-//        FilesUtilsHelper.copyResourceDirectoryToDestinationDirectory("report/" + reportFileAndDirectoryName, processedDirectoryPath);
+//        FileUtilsHelper.copyResourceDirectoryToDestinationDirectory("report/" + reportFileAndDirectoryName, processedDirectoryPath);
     }
 
     private File generateReport(String reportFileAndDirectoryName) throws Exception {

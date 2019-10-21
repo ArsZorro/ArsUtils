@@ -1,4 +1,4 @@
-package files;
+package utils;
 
 import java.io.*;
 import java.util.*;
@@ -46,7 +46,7 @@ public class TikaConverter {
         ocrConfig.setTimeout(300);
         context.set(TesseractOCRConfig.class, ocrConfig);
 
-        byte[] byteArr = FilesUtilsHelper.getByteArrayFromStream(stream);
+        byte[] byteArr = FileUtilsHelper.getByteArrayFromStream(stream);
         try (InputStream tikaStream = TikaInputStream.get(new ByteArrayInputStream(byteArr))) {
             parser.parse(tikaStream, handler, metadata, context);
         } catch (IOException | SAXException | TikaException e) {
@@ -79,6 +79,6 @@ public class TikaConverter {
                 logger.error(String.format("The PDF section in the TikaConverter says:%n%s", e));
             }
         }
-        return FilesUtilsHelper.prettifyNewLines(handler.toString());
+        return FileUtilsHelper.defaultNewLines(handler.toString());
     }
 }

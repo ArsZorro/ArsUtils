@@ -8,7 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
 import org.junit.Test;
 
-import files.FilesUtilsHelper;
+import utils.FileUtilsHelper;
 import table.model.ExtractableCell;
 import table.model.ExtractableRow;
 
@@ -54,8 +54,8 @@ public class TextUtilsTest {
 
     private void processExcelBaseTest(String fileName) {
         try {
-            File file = FilesUtilsHelper.getClassPathResource("text/utils/" + fileName).getFile();
-            String text = FilesUtilsHelper.getFileTextByExtension(file);
+            File file = FileUtilsHelper.getClassPathResource("text/utils/" + fileName).getFile();
+            String text = FileUtilsHelper.readFileByExtension(file);
             Assert.assertEquals("File texts is not equals, expected: ", "текст 1 \n"
                                                                         + "текст 2 \n"
                                                                         + "текст 3 \n", text);

@@ -1,17 +1,20 @@
-package files;
+package utils;
 
 import java.io.*;
 import java.net.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import com.google.common.base.Charsets;
+import com.google.common.collect.Sets;
 import com.google.common.io.CharStreams;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.io.Charsets;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
@@ -21,16 +24,14 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.StopWatch;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.util.DigestUtils;
 
-import collections.CollectionsUtils;
-import table.ExcelUtils;
-
-public class FilesUtilsHelper {
+public abstract class FileUtilsHelper {
     private static final Integer DEFAULT_BYTES_SIZE = 1024;
-    private static final Integer DEFAULT_MAX_SUITABLE_NODE_TEXT_LENGTH = 3_000_000;
-    private static final Integer DEFAULT_MAX_SUITABLE_NODE_TEXT_LINE_LENGTH = 50_000;
 
-    public void createManyBigFiles(String path, String incomingFile, String resultFile, int startRowPosition, int maxLinesCounter) throws Exception {
+    public static void createManyBigFiles(String path, String incomingFile, String resultFile, int startRowPosition, int maxLinesCounter) throws Exception {
         List<String> lines = FileUtils.readLines(
             new File(path + "\\" + incomingFile));
 
@@ -72,41 +73,12 @@ public class FilesUtilsHelper {
         fileWriter.flush();
     }
 
-
-    public static String getStringFromClassPathFile(String fileName) {
-        Resource resource = new DefaultResourceLoader().getResource("classpath:" + fileName);
-        try {
-            return getStringFromResource(resource);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static String getStringFromResource(Resource resource) throws IOException {
-        InputStream stream = resource.getInputStream();
-        StringWriter writer = new StringWriter();
-        IOUtils.copy(stream, writer, "UTF-8");
-        return writer.toString();
-    }
-
-    public static List<String> readLinesFromResource(String filePath) throws IOException {
-        Resource resource = new DefaultResourceLoader().getResource("classpath:" + filePath);
-        return CharStreams.readLines(new InputStreamReader(resource.getInputStream(), Charsets.UTF_8));
-    }
-
-    public static boolean isValidRelativePath(String rootPath, String relativePath) {
-        return new File(rootPath, relativePath)
-                .toPath()
-                .normalize()
-                .startsWith(rootPath);
-    }
-
     public static List<File> listFilesForFolder(File folder) {
         List<File> resultFiles = new ArrayList<>();
         try {
             Files.walk(folder.toPath())
-                    .filter(path -> !Files.isDirectory(path))
-                    .forEach(path -> resultFiles.add(new File(path.toString())));
+                 .filter(path -> !Files.isDirectory(path))
+                 .forEach(path -> resultFiles.add(new File(path.toString())));
             return resultFiles;
         } catch (IOException e) {
             return resultFiles;
@@ -160,26 +132,41 @@ public class FilesUtilsHelper {
         return files;
     }
 
+    public static String getStringFromClassPathFile(String fileName) {
+        try {
+            return getStringFromResource(getClassPathResource(fileName));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String getStringFromResource(Resource resource) throws IOException {
+        InputStream stream = resource.getInputStream();
+        StringWriter writer = new StringWriter();
+        IOUtils.copy(stream, writer, "UTF-8");
+        return writer.toString();
+    }
+
+    public static List<String> readLinesFromResource(String filePath) throws IOException {
+        Resource resource = getClassPathResource(filePath);
+        return CharStreams.readLines(new InputStreamReader(resource.getInputStream(), Charsets.UTF_8));
+    }
+
+    public static boolean isValidRelativePath(String rootPath, String relativePath) {
+        return new File(rootPath, relativePath)
+            .toPath()
+            .normalize()
+            .startsWith(rootPath);
+    }
+
     public static String fixFileName(String fileName) {
         String nameWithoutExtraSymbols = fileName.replaceAll("[|#$%&\'\"\\\\/\r\n\\[\\]*{}()^]+", "");
         String fixedName = nameWithoutExtraSymbols.split("[\\d][\\d][\\d][\\d][-][\\d][\\d][-][\\d][\\d]")[0];
         if (StringUtils.isEmpty(fixedName.trim())) {
-            String newIdPrefix = String.format("%s", DigestUtils.md5Hex(fileName.getBytes()));
+            String newIdPrefix = String.format("%s", DigestUtils.md5DigestAsHex(fileName.getBytes()));
             return newIdPrefix + nameWithoutExtraSymbols;
         } else {
             return nameWithoutExtraSymbols;
-        }
-    }
-
-    public static List<File> listFilesFromFolder(File folder) {
-        List<File> resultFiles = new ArrayList<>();
-        try {
-            Files.walk(folder.toPath())
-                 .filter(path -> !Files.isDirectory(path))
-                 .forEach(path -> resultFiles.add(new File(path.toString())));
-            return resultFiles;
-        } catch (IOException e) {
-            return resultFiles;
         }
     }
 
@@ -253,9 +240,9 @@ public class FilesUtilsHelper {
         return url.getPath();
     }
 
-    public static File getCoreResourceFile(String resourcePath) {
+    public static File getClassPathFile(String filePath) {
         try {
-            return getClassPathResource(resourcePath).getFile();
+            return getClassPathResource(filePath).getFile();
         } catch (IOException e) {
             return null;
         }
@@ -267,7 +254,7 @@ public class FilesUtilsHelper {
 
     public static String generateRandomDirectoryName() {
         Integer randomInt = RandomUtils.nextInt();
-        return org.springframework.util.DigestUtils.md5DigestAsHex(randomInt.toString().getBytes());
+        return DigestUtils.md5DigestAsHex(randomInt.toString().getBytes());
     }
 
     public static File mkdirsIfNotExist(String directoriesPath) {
@@ -312,6 +299,18 @@ public class FilesUtilsHelper {
         }
     }
 
+    public static List<File> listFilesFromFolder(File folder) {
+        List<File> resultFiles = new ArrayList<>();
+        try {
+            Files.walk(folder.toPath())
+                 .filter(path -> !Files.isDirectory(path))
+                 .forEach(path -> resultFiles.add(new File(path.toString())));
+            return resultFiles;
+        } catch (IOException e) {
+            return resultFiles;
+        }
+    }
+
     public static List<File> getNewFiles(List<File> oldFiles, List<File> foundedFiles) {
         Map<String, File> oldFilesAbsolutePath2File = buildAbsolutePath2File(oldFiles);
         Map<String, File> foundedFilesAbsolutePath2File = buildAbsolutePath2File(foundedFiles);
@@ -334,7 +333,7 @@ public class FilesUtilsHelper {
         return absolutePath2File;
     }
 
-    public static String prettifyNewLines(String text) {
+    public static String prettifyImageRecognizedText(String text) {
         return defaultNewLines(text).replaceAll("\n\n", "");
     }
 
@@ -342,13 +341,54 @@ public class FilesUtilsHelper {
         return text.replaceAll("\r\n", "\n");
     }
 
-    public static String[] getFullFileTextAndNodeText(File inputFile) throws IOException {
-        String fileText = getFileTextByExtension(inputFile);
-        String nodeText = getNodeText(fileText);
-        return new String[] {fileText, nodeText};
+    public static void copyResources(String from, String to) throws IOException {
+        copyResources(from, to, "");
     }
 
-    public static String getFileTextByExtension(File inputFile) throws IOException {
+    public static void copyResources(String from, String to, String extensionPattern) throws IOException {
+        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        Resource[] resources = resolver.getResources(ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX
+                                                     + from + "/**");
+        URI inJarUri = new DefaultResourceLoader().getResource("classpath:" + from).getURI();
+
+        for (Resource resource : resources) {
+            String relativePath = resource
+                .getURI()
+                .getRawSchemeSpecificPart()
+                .replace(inJarUri.getRawSchemeSpecificPart(), "");
+            if (relativePath.isEmpty() || (!extensionPattern.isEmpty() && !relativePath.endsWith(extensionPattern))) {
+                continue;
+            }
+            if (relativePath.endsWith("/") || relativePath.endsWith("\\")) {
+                File dirFile = new File(to + relativePath);
+                if (!dirFile.exists()) {
+                    dirFile.mkdir();
+                }
+            } else {
+                copyResourceToFilePath(resource, to + relativePath);
+            }
+        }
+    }
+
+    public static void copyResource(String source, String destination) throws IOException {
+        Path destinationPath = Paths.get(destination);
+        Files.createDirectories(destinationPath.getParent());
+        Resource sourceResource = new DefaultResourceLoader().getResource("classpath:" + source);
+        Files.copy(
+            sourceResource.getInputStream(),
+            destinationPath,
+            StandardCopyOption.REPLACE_EXISTING);
+    }
+
+    private static void copyResourceToFilePath(Resource resource, String filePath) throws IOException {
+        File file = new File(filePath);
+        if (!file.exists()) {
+            InputStream resourceInputStream = resource.getInputStream();
+            FileUtils.copyInputStreamToFile(resourceInputStream, file);
+        }
+    }
+
+    public static String readFileByExtension(File inputFile) throws IOException {
         String text;
         String extension = FilenameUtils.getExtension(inputFile.toString()).toLowerCase();
 
@@ -371,33 +411,8 @@ public class FilesUtilsHelper {
         return text;
     }
 
-    private static String getNodeText(String inputText) {
-        String nodeText = inputText;
-        if (nodeText.trim().isEmpty()) {
-            nodeText = "Пустой текстовый файл или ошибка распознавания изображений или чтения файла.\n"
-                       + "Текст можно добавить вручную, ссылка на исходный файл ниже.";
-        } else if (nodeText.length() > DEFAULT_MAX_SUITABLE_NODE_TEXT_LENGTH + 1) {
-            nodeText = nodeText.substring(0, DEFAULT_MAX_SUITABLE_NODE_TEXT_LENGTH) + "\n\nДлина текста была более 3 миллионов знаков.\n"
-                       + "Оставшаяся часть документа обрезана. Вы можете добавить её вручную.\n";
-        } else {
-            String[] lines = nodeText.split("\n");
-            int num = 0;
-            boolean cut = false;
-            for (String line : lines) {
-                if (line.length() > DEFAULT_MAX_SUITABLE_NODE_TEXT_LINE_LENGTH + 1) {
-                    lines[num] = line.substring(0, DEFAULT_MAX_SUITABLE_NODE_TEXT_LINE_LENGTH) + " --- Строка длиннее 50000 знаков была обрезана. "
-                                 + "Вы можете добавить тект вручную.";
-                    cut = true;
-                }
-                num++;
-            }
-            if (cut) {
-                nodeText = "";
-                for (String line : lines) {
-                    nodeText += line + "\n";
-                }
-            }
-        }
-        return nodeText;
+    public static boolean isApachePoiSupportedExcelFile(File file) {
+        String extension = FilenameUtils.getExtension(file.toString()).toLowerCase();
+        return Sets.newHashSet("xlsx", "xls", "xlsm", "xlt", "xltm").contains(extension);
     }
 }

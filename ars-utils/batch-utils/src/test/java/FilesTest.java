@@ -1,20 +1,18 @@
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import files.TikaConverter;
+import utils.TikaConverter;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
-import files.FilesUtilsHelper;
+import utils.FileUtilsHelper;
 
 public class FilesTest {
     @Test
     public void test() throws Exception {
-        FilesUtilsHelper filesUtilsHelper = new FilesUtilsHelper();
-        filesUtilsHelper.createManyBigFiles("", "", "", 0, 3550000);
+        FileUtilsHelper.createManyBigFiles("", "", "", 0, 3550000);
     }
 
     @Test
@@ -37,7 +35,7 @@ public class FilesTest {
     @Test
     public void searchFilesWithText() {
         String regex = "Работа, подтвержденная свидетельскими показаниям";
-        List<File> files = FilesUtilsHelper.listFilesForFolder(new File("C:\\Users\\User\\Desktop\\tests"));
+        List<File> files = FileUtilsHelper.listFilesForFolder(new File("C:\\Users\\User\\Desktop\\tests"));
         for (File file : files) {
             try {
                 String txt = FileUtils.readFileToString(file);

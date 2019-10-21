@@ -10,6 +10,7 @@
     </parent>
 
     <properties>
+        <tika.version>1.21</tika.version>
         <lucene.version>5.5.0</lucene.version>
         <tinkerpop.version>3.4.2</tinkerpop.version>
         <poi-ooxml.version>4.1.0</poi-ooxml.version>
@@ -81,15 +82,16 @@
             <version>${lucene.version}</version>
         </dependency>
 
+
         <dependency>
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
-            <version>1.21</version>
+            <version>${tika.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-parsers</artifactId>
-            <version>1.21</version>
+            <version>${tika.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
         <dependency>
