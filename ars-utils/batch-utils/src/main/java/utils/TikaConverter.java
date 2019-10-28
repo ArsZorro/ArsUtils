@@ -27,13 +27,13 @@ public class TikaConverter {
     protected TikaConverter() {}
 
     public static String process(File file, String extension) throws IOException {
-        try (InputStream stream = new FileInputStream(file)) {
+        try (FileInputStream stream = new FileInputStream(file)) {
             return process(stream, extension);
         }
     }
 
     @SuppressWarnings("MagicNumber")
-    public static String process(InputStream stream, String extension) {
+    public static String process(FileInputStream stream, String extension) {
         Parser parser = new AutoDetectParser();
         BodyContentHandler handler = new BodyContentHandler(-1); // Unlimited writing (-1)!
         Metadata metadata = new Metadata();

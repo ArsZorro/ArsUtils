@@ -115,4 +115,81 @@ public class TextUtilsTest {
         E_1,
         E_2
     }
+
+    @Test
+    public void splitFiles() throws Exception {
+        String fullText = getFilesText("C:\\Users\\User\\Desktop\\Архив по работе\\Резюме\\Все резюме\\Новая папка");
+
+        fullText = duplicate(fullText, 2000000);
+
+        List<String> strings = splitEqually(fullText, 664790);
+        System.out.println(new HashSet<>(strings).size() + " : " + strings.size());
+
+        Long bytesLength = calcBytesLength(strings);
+        System.out.println("Middle bytes:" + divide(bytesLength, strings.size()));
+
+        saveToFiles(strings);
+    }
+
+    private String duplicate(String fullText, int i) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int j = 0; j< i; j++) {
+            stringBuilder.append(fullText).append("\n");
+        }
+        return stringBuilder.toString();
+    }
+
+    private String getFilesText(String folder) throws Exception {
+        File file1 = new File(folder);
+        if (!file1.exists() && !file1.mkdirs()) {
+            throw new RuntimeException();
+        }
+
+        StringBuilder fullText = new StringBuilder();
+
+        for (File file : FileUtilsHelper.listFilesForFolder(file1)) {
+            String line = FileUtilsHelper.readFileByExtension(file);
+            fullText.append(line).append("\n");
+        }
+
+        return fullText.toString();
+    }
+
+    private void saveToFiles(List<String> strings) throws IOException {
+        File file = new File("C:\\Users\\User\\Desktop\\TESTS\\OUTPUT\\");
+        if (!file.exists() && !file.mkdirs()) {
+            throw new RuntimeException();
+        }
+
+        int i = 1;
+        for (String string : strings) {
+            FileWriter fileWriter = new FileWriter(new File(file, i + "_" + System.currentTimeMillis() + ".txt"));
+            fileWriter.append(string);
+            fileWriter.flush();
+            fileWriter.close();
+            i++;
+        }
+    }
+
+    public static List<String> splitEqually(String text, int size) {
+        List<String> ret = new ArrayList<String>((text.length() + size - 1) / size);
+
+        for (int start = 0; start < text.length(); start += size) {
+            ret.add(text.substring(start, Math.min(text.length(), start + size)));
+        }
+        return ret;
+    }
+
+    private static Long calcBytesLength(List<String> requests) {
+        Long summaryBytesLength = 0L;
+        for (String request : requests) {
+            byte[] bytes = request.getBytes();
+            summaryBytesLength += bytes.length;
+        }
+        return summaryBytesLength;
+    }
+
+    private static double divide(long first, long second) {
+        return (double) first / (double) second;
+    }
 }
