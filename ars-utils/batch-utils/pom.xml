@@ -11,7 +11,7 @@
 
     <properties>
         <tika.version>1.22</tika.version>
-        <lucene.version>5.5.0</lucene.version>
+        <lucene.version>8.2.0</lucene.version>
         <tinkerpop.version>3.4.2</tinkerpop.version>
         <poi-ooxml.version>4.1.0</poi-ooxml.version>
     </properties>
