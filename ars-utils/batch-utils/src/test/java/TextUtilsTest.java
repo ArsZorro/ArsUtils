@@ -140,19 +140,26 @@ public class TextUtilsTest {
     }
 
     private String getFilesText(String folder) throws Exception {
-        File file1 = new File(folder);
-        if (!file1.exists() && !file1.mkdirs()) {
-            throw new RuntimeException();
-        }
-
         StringBuilder fullText = new StringBuilder();
 
-        for (File file : FileUtilsHelper.listFilesForFolder(file1)) {
-            String line = FileUtilsHelper.readFileByExtension(file);
+        for (File file : getFiles(folder)) {
+            String line = getFileText(file);
             fullText.append(line).append("\n");
         }
 
         return fullText.toString();
+    }
+
+    private String getFileText(File file) throws Exception {
+        return FileUtilsHelper.readFileByExtension(file);
+    }
+
+    private List<File> getFiles(String folder) {
+        File file1 = new File(folder);
+        if (!file1.exists() && !file1.mkdirs()) {
+            throw new RuntimeException();
+        }
+        return FileUtilsHelper.listFilesForFolder(file1);
     }
 
     private void saveToFiles(List<String> strings) throws IOException {
@@ -191,5 +198,25 @@ public class TextUtilsTest {
 
     private static double divide(long first, long second) {
         return (double) first / (double) second;
+    }
+
+    @Test
+    public void fileSearcher() throws Exception {
+        String query = "".toUpperCase();
+        String filedPath = "";
+        List<File> files = getFiles(filedPath);
+
+        List<File> suitableFiles = new ArrayList<>();
+        for (File file : files) {
+            String text = getFileText(file);
+            if (text.toUpperCase().contains(query)) {
+                suitableFiles.add(file);
+            }
+        }
+
+        System.out.println("Suitable files size:" + suitableFiles.size());
+        for (File file : suitableFiles) {
+            System.out.println("Name " + file.getAbsolutePath());
+        }
     }
 }
