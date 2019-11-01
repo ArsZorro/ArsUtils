@@ -120,9 +120,9 @@ public class TextUtilsTest {
     public void splitFiles() throws Exception {
         String fullText = getFilesText("C:\\Users\\User\\Desktop\\Архив по работе\\Резюме\\Все резюме\\Новая папка");
 
-        fullText = duplicate(fullText, 2001);
+        fullText = duplicate(fullText, 30);
 
-        List<String> strings = splitEqually(fullText, 6042);
+        List<String> strings = splitEqually(fullText, 60 * 10);
         System.out.println(new HashSet<>(strings).size() + " : " + strings.size());
 
         Long bytesLength = calcBytesLength(strings);
