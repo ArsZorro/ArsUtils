@@ -1085,7 +1085,7 @@ ParseTextRequest{text='
 основное 
 
 · 1999 — Ростовская государственная экономическая академия', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-token= РОСТОВСКАЯ ГОСУДАРСТВЕННАЯ ЭКОНОМИЧЕСКАЯ АКАДЕМИЯ class= Организация
+
 
 
 ParseTextRequest{text=' 
@@ -2543,7 +2543,7 @@ IT, Internet, Telecom
 
 Employment: full time
 Work schedu', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-
+token= ENGINEER QA class= Лицо
 
 
 ParseTextRequest{text=' RAML + raml2html + JSON Schema). Водители, заказы, клиенты, операторы, т.п.
@@ -3672,6 +3672,7 @@ ParseTextRequest{text=' лиц.
 Материала', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
 token= АКАДЕМИЯ ТРУДА class= Организация
 token= ВСЕСОЮЗНЫЙ ЦЕНТРАЛЬНЫЙ СОВЕТ ПРОФЕССИОНАЛЬНЫХ СОЮЗОВ class= Организация
+token= ГОРОД МОСКВА class= Место
 
 
 ParseTextRequest{text=' мая по октябрь 2006 года – Министерство экономического развития и торговли Р.Ф. Занимаемая должность – ведущи', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
@@ -5157,7 +5158,6 @@ token= ВЫМПЕЛКОМ class= Организация additional=[ key=Орг�
 
 
 ParseTextRequest{text='.2002 - Executive MBA - Школа менеджмента университета Антверпена (Universiteit Antwerpen Management School - ', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-token= UNIVERSITEIT ANTWERPEN MANAGEMENT SCHOOL class= Организация
 token= УНИВЕРСИТЕТ АНТВЕРПЕНА class= Организация
 token= ШКОЛА МЕНЕДЖМЕНТА class= Организация
 
@@ -6054,6 +6054,7 @@ ParseTextRequest{text='56@yandex.ru
 token= 56@yandex.ru class= Email
 token= 74951638028 class= Телефон
 token= 79104712548 class= Телефон
+token= ГОРОД МОСКВА class= Место
 
 
 ParseTextRequest{text='6.03.2004 АКБ «СЛАВИЯ» ЗАО  МОСКВА
@@ -6862,7 +6863,6 @@ token= upwork.nazarov.tech class= Предмет
 
 ParseTextRequest{text='b.com/geobalas/Poker
 - Demo: http://dev.tableflippoker.com (Please test it with two browser tabs, or two brows', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-token= b.com/geobalas/Poker class= Предмет
 token= dev.tableflippoker.com class= Предмет
 
 
@@ -7097,7 +7097,7 @@ ParseTextRequest{text='er)
 основное 
 
 · 1999 — Международный институт ', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-token= МЕЖДУНАРОДНЫЙ ИНСТИТУТ class= Организация
+
 
 
 ParseTextRequest{text='er/1751001
@@ -7224,7 +7224,6 @@ ParseTextRequest{text='gement in telecom, Barcelona, Spain.
 Образование:          
 
 1998-2000               Высшая коммерческая школа', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-token= ВЫСШАЯ КОММЕРЧЕСКАЯ ШКОЛА class= Организация
 token= ИСПАНИЯ class= Место
 
 
@@ -7659,8 +7658,8 @@ Greece, www.artifax.net/
 ', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
 [ key=Комментарий value=расположен в ]
 token= ARTIFAX class= Организация
-token= GREECE class= Место
 token= artifax.net class= Предмет
+token= ГРЕЦИЯ class= Место
 
 
 ParseTextRequest{text='n the team that works on the roulette games.
@@ -7937,7 +7936,6 @@ Testing of Sony Network Entertainment product', tokenBindingMode=NO_BINDING, cus
 [ key=Комментарий value=расположен в ]
 token= CITY SAINT PETERSBURG class= Место
 token= SPERASOFT class= Организация
-token= sperasoft.ru class= Предмет
 
 
 ParseTextRequest{text='r app (ASP.NET Web API, React.js).
@@ -9051,9 +9049,9 @@ ParseTextRequest{text='Оранж Систем Групп (Orange System)
 Senior Java Developer / Scrum Master
 1', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
 [ key=Комментарий value=расположен в ]
-token= CITY САНКТ-ПЕТЕРБУРГ class= Место
 token= ORANGE SYSTEM class= Организация
 token= orangesystem.ru class= Предмет
+token= ГОРОД САНКТ-ПЕТЕРБУРГ class= Место
 token= ОРАНЖ СИСТЕМ ГРУПП class= Организация
 
 
@@ -9489,7 +9487,7 @@ token= СПЕЙС ТРЕВЕЛ class= Организация additional=[ key=О
 
 ParseTextRequest{text='а сведений по результатам выполненных работ.
 · Сопровождение пользователей при выполнении работ по переносу SA', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-
+token= SOSIEDAD ANONIMA class= Организация
 
 
 ParseTextRequest{text='а своего стремлюсь быть достоин. При нежной любви к тренду, не всякую вундервафлю волоку в продакшн
@@ -14375,6 +14373,8 @@ ParseTextRequest{text='йтов и программного обеспечени
 ООО "КИС ЦВС"
 Красноярск
 Программист', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД КРАСНОЯРСК class= Место
 token= КИС ЦВС class= Организация additional=[ key=Организационно-правовая форма value=ООО ]
 
 
@@ -15634,7 +15634,7 @@ ParseTextRequest{text='нвестиции/Лизинг
 Основное 
 
 · 2006 — Ming-Chuan University', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-token= CHUAN UNIVERSITY class= Организация
+
 
 
 ParseTextRequest{text='нвестиционная компания «Никойл» составил 2 059 500 руб., в компании «Лукойл» -  13 863 руб., в ЗАО «Управляюща', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
@@ -16021,7 +16021,7 @@ ParseTextRequest{text='нкт-Петербург, mobbtech.com/
 Middle Front-end developer
 Разработка front-end проекта.
 Front-end основан на Ang', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
-token= CITY САНКТ-ПЕТЕРБУРГ class= Место
+token= ГОРОД САНКТ-ПЕТЕРБУРГ class= Место
 
 
 ParseTextRequest{text='нкт-Петербург, mobbtech.com/
@@ -16321,6 +16321,7 @@ eddue@yandex.ru
 Перее', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
 token= 79262749926 class= Телефон
 token= eddue@yandex.ru class= Email
+token= ГОРОД МОСКВА class= Место
 
 
 ParseTextRequest{text='нститут
@@ -16926,6 +16927,7 @@ ParseTextRequest{text='ождал договора на присоединени
 
 ParseTextRequest{text='ождения, проверена по последним местам работы в г. Владивостоке Приморского края - Первом Приморском Коммерчес', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
 token= ГОРОД ВЛАДИВОСТОК class= Место
+token= ГОРОД ПРИМОРСК class= Место
 token= КРАЙ ПРИМОРЬЕ class= Место
 
 
@@ -19658,7 +19660,7 @@ ParseTextRequest{text='та с ФСС РФ и ГИТ.
 
 Главн', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=false}
 [ key=Комментарий value=расположен в ]
-token= ГОРОД ВЛАДИВОСТОК ГЛАВН class= Место
+token= ГОРОД ВЛАДИВОСТОК class= Место
 token= ПРИМОРСКОЕ РО ФОНДА СОЦИАЛЬНОГО СТРАХОВАНИЯ РФ class= Организация
 
 
