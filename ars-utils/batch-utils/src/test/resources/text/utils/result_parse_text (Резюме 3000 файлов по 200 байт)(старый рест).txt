@@ -1111,6 +1111,7 @@ token= ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА class= Орган�
 ParseTextRequest{text='
 
 Романюк А.Е. действительно окончил Авиационный техникум им. Жуковского, после чего поступил в ОмГТУ на аэро', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
+token= ОМГТУ  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= РОМАНЮК А Е class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
@@ -3234,9 +3235,11 @@ ParseTextRequest{text=' владею
 ParseTextRequest{text=' воспитан.
 
 Начальник студенческого отдела кадров ОмГТУ Хворова Н.И. сообщила, что в личном деле Романюка А.Е.', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
+[ key=Комментарий value=начальник ]
+token= ОМГТУ  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= ОТДЕЛ КАДРОВ class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= РОМАНЮК А Е class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
-token= ХВОРОВ Н И class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ХВОРОВА Н И class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
 ParseTextRequest{text=' время
@@ -9299,7 +9302,7 @@ token= ФАКУЛЬТЕТ; ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ СВЯ�
 
 
 ParseTextRequest{text='УГАЭС, квантово-химические расчеты и исследовательская деятельность по литий-серным источникам вторичного тока', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
-
+token= УГАЭС  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
 ParseTextRequest{text='Уральский Государственный Университет
@@ -9422,7 +9425,7 @@ ParseTextRequest{text='а 3G. (Руководство техническим н�
 
 
 ParseTextRequest{text='а Д.Ю. на должность Коммерческого директора ЗАО «       ТТ               мобайл       » (2010г.), коллеги связ', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
-token= ТТ МОБАЙЛ class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ЗАО ]
+token= ЗАО        ТТ               мобайл        class= Организация tokenExtractorName= Компания рус. tokenExtractorType= REGEX
 
 
 ParseTextRequest{text='а Михайловна, г/р 1988.
@@ -14051,7 +14054,8 @@ ParseTextRequest{text='истемный администратор, комп. к
 
 2005-2006гг  
 аспирантура ', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
-
+token= БАШГУ class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЭКОНОМИЧЕСКИЙ ФАКУЛЬТЕТ; БАШГУ, УНИВЕРСИТЕТ class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
 ParseTextRequest{text='истему OEBS.
@@ -14799,7 +14803,7 @@ ParseTextRequest{text='крытых Систем
 
 ParseTextRequest{text='ктами в РАНХиГС;
 - Умение структурировать полученную информацию, представлять в понятном графическом и текстов', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
-
+token= РАНХИГС  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
 ParseTextRequest{text='ктуры;
@@ -17190,7 +17194,8 @@ ParseTextRequest{text='ома
 
 	МФТИ
 	Магистр прикладных математики и', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
-
+token= МФТИ  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МФТИ  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
 ParseTextRequest{text='омандообразующих мероприятий с проектной командой со стороны Заказчика
@@ -18697,6 +18702,7 @@ ParseTextRequest{text='рирование
 Трудовая деятельность:
 
 02.2010 – н/в – ООО Тор', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
+token= ИСПИ РАН class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= РОССИЙСКАЯ АКАДЕМИЯ НАУК class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= ТОР class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
 
@@ -20738,6 +20744,7 @@ ParseTextRequest{text='химический факультет.
 Трудовая деятельность:
 
 06.2009 – н/в – ОАО «Башкирс', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
+token= УГАЭС  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= ХИМИЧЕСКИЙ ФАКУЛЬТЕТ class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
@@ -21871,9 +21878,11 @@ ParseTextRequest{text='— Декабрь 2012
 
 РН-УфаНИПИНефть в лице субподрядчика (ИКИ при УГАТУ)
 Уфа, www.ugatu.ac.ru/kompyuter', tokenBindingMode=NO_BINDING, customDelimiter='null', extractAsync=true}
+[ key=Комментарий value=расположен в ]
 token= ugatu.ac.ru/kompyuter class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= ГОРОД УФА class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 token= РН УФАНИПИНЕФТЬ class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УГАТУ  class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
 
 
 ParseTextRequest{text='— Декабрь 2014
