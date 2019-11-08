@@ -1,33 +1,78 @@
-424
-515
-619
-Main: 22 октября 1955 г.
-Near: Шевченко Анна Ивановна,
-22 октября 1955 г.р., воспитатель ГБ ДОУ
-Main: 1.09.1979 г.
-Near: Кожина Наталья Васильевна, 1.09.1979 г.р.
-Main: 30.09.1981 г.
-Near: Шевченко
+development
+achieve
+ade
+allow
+application
+approach
+b2b
+brief
+change
+collectiv
+condition
+control
+developer
+didn't
+different
+domain
+even
+far
+frequent
+frequently
+further
+gain
+incremental
+internet
+introduce
+introduction
+kamaelia
+keep
+keeping
+large
+lead
+llc
+maintain
+maintainable
+manage
+management
+meeting
+opencaster
+organize
+process
+product
+project
+proper
+quality
+regular
+release
+requirement
+service
+software
+sphere
+system
+technology
+test
+tier
+twist
+twisted
+under
+various
+июль
+месяц
+новосибирск
+сентябрь
 
 
-1: 30.09.1981 г.
-2: Шевченко
-1: 22 октября 1955 г.
-2: Шевченко Анна Ивановна,
-22 октября 1955 г.р., воспитатель ГБ ДОУ
-1: 1.09.1979 г.
-2: Кожина Наталья Васильевна, 1.09.1979 г.р.
-424
-515
-Main: 22 октября 1955 г.
-Near: Шевченко Анна Ивановна,
-22 октября 1955 г.р., воспитатель ГБ ДОУ
-Main: 1.09.1979 г.
-Near: Кожина Наталья Васильевна, 1.09.1979 г.р.
+ade, but the project didn't gain further development.
+
+Technologies: Twisted, Kamaelia, OpenCaster.
+Сентябрь 2008 — Июль 2009
+11 месяцев
 
 
-1: 1.09.1979 г.
-2: Кожина Наталья Васильевна, 1.09.1979 г.р.
-1: 22 октября 1955 г.
-2: Шевченко Анна Ивановна,
-22 октября 1955 г.р., воспитатель ГБ ДОУ
+Internet Services, LLC
+Новосибирск
+Lead Developer
+Development of large B2B software system in the sphere of domains management.
+
+Managed to organize the development process that allowed to maintain the product in proper quality even under frequently changing requirements. That was achieved by introduction of various tests on different application tiers and by control of keeping them in maintainable condition.
+There was introduced the approach with frequent incremental releases, regular (but brief) meetings and collectiv
