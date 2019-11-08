@@ -230,4 +230,34 @@ public class CommonTests {
         }
         return parts;
     }
+
+    @Test
+    public void getTextPart() {
+        String s = ".\n"
+                   + "\n"
+                   + "Опыт работы —5 лет 1 месяц\n"
+                   + "Декабрь 2013 — настоящее время\n"
+                   + "4 года 2 месяца\n"
+                   + "\n"
+                   + "\n"
+                   + "Mobile Business Technologies\n"
+                   + "Санкт-Петербург, mobbtech.com/\n"
+                   + "Middle Front-end developer\n"
+                   + "Разработка front-end проекта.\n"
+                   + "Front-end основан на AngularJS.\n"
+                   + "В проекте используются ui-router, jQuery, WebSocket, ajax, bootstrap less, nodeJS для оптимизации перед деплоем.\n"
+                   + "Результаты http://iqoption.com/\n"
+                   + "Июль 2012 — Ноябрь 2012\n"
+                   + "5 месяцев\n"
+                   + "\n"
+                   + "\n"
+                   + "Mobile Business Technologies\n"
+                   + "Санкт-Петербург, mobbtech.com/\n"
+                   + "Web developer\n"
+                   + "Разработка серверной части мобильных приложкний.\n"
+                   + "Приложение PhotoRepost, работа с Instagram API на сервере, разработка админки для наполнения новостных лент.\n"
+                   + "Поддержка и развитие ре";
+        System.out.println(s.substring(95, 123));
+        System.out.println(s.substring(425, 453));
+    }
 }
