@@ -1,0 +1,1564 @@
+ParseTextRequest{text='( MS Windows, Word, Excel, архивирование);
+
+
+	Шахурин Петр
+
+Java разработчик
+
+E-mail
+
+pyhyp@mail.ru
+
+Тел.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= pyhyp@mail.ru start= 79 end= 101 class= Email tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ШАХУРИН ПЕТР start= 46 end= 101 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='-   core    и смежном оборудовании,         замещение начальника отдела при его отсутствии.              Круг', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='.
+
+
+
+
+
+
+	Место для фото
+
+3х4
+(не позднее годичной давности)
+
+	Фамилия, имя, отчество   Семёнов Алексей Ми', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СЕМЕНОВ АЛЕКСЕЙ start= 92 end= 107 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='.ru
+Илья Страйков (CTO)
+Обо мне
+✰ держусь американского стандарта: работать много, добросовестно и на результа', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СТРАЙКОВ start= 9 end= 23 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='01.1999 - 02.2001,          Индивидуальный предприниматель Минаков Виктор Александрович, кафе «Бриз»,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=сотрудник ]
+token= БРИЗ start= 89 end= 100 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНАКОВ ВИКТОР АЛЕКСАНДРОВИЧ start= 28 end= 87 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='06 612160 выдан Отделом Внутренних Дел Зарайского района Московской области 26.10.2004
+Адрес по прописке: 1406', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ОБЛАСТЬ МОСКОВСКАЯ start= 57 end= 75 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ ВНУТРЕННИХ ДЕЛ start= 16 end= 75 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РАЙОН ЗАРАЙСКИЙ start= 39 end= 75 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='06, № 163643, выданный ОВД «Биберево» г. Москвы, 23.09.2003 года.
+
+С 18.02.2006 года прописана и проживает по', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= БИБЕРЕВО start= 23 end= 47 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД МОСКВА start= 38 end= 47 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 23 end= 26 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='07.10.10
+
+
+Место жительства: 450071, г. Уфа,  г. Уфа, Ленина, 26 –', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД УФА start= 37 end= 52 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УФА, УЛИЦА ЛЕНИНА, 26 start= 29 end= 64 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Адрес регистрации value=УФА, УЛИЦА ЛЕНИНА, 26 ,  key=Город value=УФА ,  key=Дом value=26 ,  key=Индекс value=450071 ,  key=Тип места - Адрес value=Тип места - Адрес ,  key=Улица value=улица ЛЕНИНА ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='08.2008 -12.2010                СПб, 17 линия ВО, д.35                  8 800 550 05 55', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= 78005500555 start= 72 end= 87 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= ГОРОД САНКТ-ПЕТЕРБУРГ start= 32 end= 35 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= САНКТ-ПЕТЕРБУРГ, ЛИНИЯ NULL, 35 start= 32 end= 54 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Адрес регистрации value=САНКТ-ПЕТЕРБУРГ, ЛИНИЯ NULL, 35 ,  key=Город value=САНКТ-ПЕТЕРБУРГ ,  key=Дом value=35 ,  key=Тип места - Адрес value=Тип места - Адрес ,  key=Улица value=линия null ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='10.2008 – ООО «Новые системы телеком», менеджер по маркетингу.
+
+Кандидатура ОАО «МСС» (СКАЙ ЛИНК) – от 21.03.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МСС start= 76 end= 85 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= НОВЫЕ СИСТЕМЫ ТЕЛЕКОМ start= 10 end= 37 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+token= СКАЙ ЛИНК start= 86 end= 97 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='10.85 г.р. г.Москва , Закирова С. 20.11.52 г.р. прибыла из Нижегородской обл., Карасева Г.С. 23.09.34 г.р. при', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 11 end= 19 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЗАКИРОВА С start= 22 end= 47 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1952-11-20 ]
+token= КАРАСЕВ Г С start= 79 end= 106 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1934-09-23 ]
+token= ОБЛАСТЬ НИЖЕГОРОДСКАЯ start= 59 end= 77 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='133-20-82
+
+
+
+СПРАВКА
+
+В ходе проверки, проведенной в отношении кандидата в отдел долговых ценных бумаг Департ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ДОЛГОВЫХ ЦЕННЫХ БУМАГ start= 76 end= 103 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='16
+7 месяцев
+
+
+Криэйт, ООО
+Санкт-Петербург, createdigital.me
+Backend Developer
+проектная работа: b2b шофёр-сер', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД САНКТ-ПЕТЕРБУРГ start= 27 end= 42 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= КРИЭЙТ start= 15 end= 21 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='1985 года  г.Петрозаводске. Имеет паспорт 4507   745927, выданный Отделом внутренних дел Гагаринского района г', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД ПЕТРОЗАВОДСК start= 109 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД ПЕТРОЗАВОДСК start= 11 end= 26 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ ВНУТРЕННИХ ДЕЛ start= 66 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4507745927, ВЫДАН ОТДЕЛ ВНУТРЕННИХ ДЕЛ, РАЙОН ГАГАРИНСКИЙ, ГОРОД ПЕТРОЗАВОДСК start= 34 end= 110 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4507745927 ]
+token= РАЙОН ГАГАРИНСКИЙ start= 89 end= 108 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='1985)
+Образование
+· 2001 – 2006 –Институт Бизнеса, Права и Маркетинга (г. Москва). Факультет Рекламы, Маркети', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 72 end= 81 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ИНСТИТУТ БИЗНЕСА, ПРАВА И МАРКЕТИНГА start= 34 end= 82 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ РЕКЛАМЫ start= 84 end= 101 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='2 г. – ноябрь 2012 г.              ФГБОУ ВПО «Нижегородский государственный архитектурно-строительный универси', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='2000 – 10.2009 – ЗАО «Соник Дуо» Мегафон – Москва» (100% дочерняя компания ОАО «Мегафон»), административный ди', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 43 end= 49 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МЕГАФОН start= 75 end= 88 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= СОНИК ДУО МЕГАФОН start= 17 end= 50 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ЗАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='2000 — April 2005
+4 years 8 months
+
+
+T-Systems CIS (SAP AG)
+
+Senior Software Engineer
+Internal web services de', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= SAP start= 52 end= 59 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='2005 — July 2007
+2 years 3 months
+
+
+Sun Microsystems SPB
+
+Senior Software Quality
+J2ME test harness developmen', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='2012
+Башкирский государственный университет, Уфа
+Факультет математики и информационных технологий, Прикладная', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= БАШКИРСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ start= 5 end= 48 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД УФА start= 45 end= 48 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ МАТЕМАТИКИ И ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ start= 5 end= 97 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='2015
+1 год 4 месяца
+
+
+Уфанет
+Уфа, www.ufanet.ru
+Full-Stack Web Developer
+✓ разработал http://wildnaturehd.tv,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ufanet.ru start= 34 end= 47 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= wildnaturehd.tv start= 86 end= 108 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД УФА start= 29 end= 32 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УФАНЕТ start= 22 end= 32 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='2016
+St. Petersburg State University, Saint Petersburg
+Faculty of Applied Mathematics and Control Processes,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= CITY SAINT PETERSBURG; STATE UNIVERSITY start= 20 end= 54 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= CITY SAINT PETERSBURG; STATE UNIVERSITY start= 5 end= 19 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= STATE UNIVERSITY start= 20 end= 36 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='424815  -635                                      Чуркин Алексей Геннадьевич                       02.12.83', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЧУРКИН АЛЕКСЕЙ ГЕННАДЬЕВИЧ start= 50 end= 76 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='495)228-16-08
+
+· Натали-Турс
+Галеева Инна, начальник визового отдела
+(495)792-56-00
+
+Дополнительная информац', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= 74952281608 start= 0 end= 13 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= 74957925600 start= 70 end= 84 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= ГАЛЕЕВА ИННА start= 30 end= 69 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= НАТАЛИ ТУРС start= 18 end= 29 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='67-5428
+Факс +7 (095) 261-1547
+
+client@ventra.ru, www.ventra.ru
+
+
+Щукин Александр Викторович
+
+Позиция: Специал', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= client@ventra.ru start= 32 end= 48 class= Email tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ventra.ru start= 50 end= 63 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЩУКИН АЛЕКСАНДР ВИКТОРОВИЧ start= 66 end= 92 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='71, 73, 75, 76, 68, 69, 96, 97). Составление и сдача отчетности в ИФНС, ПФР, ФСС (в т.ч. персонифицированный у', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ИНСПЕКЦИЯ; ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА (ФНС), ФЕДЕРАЛЬНАЯ СЛУЖБА start= 66 end= 70 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПЕНСИОННЫЙ ФОНД start= 72 end= 75 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА start= 66 end= 70 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='8962    7298888                  Машенин      Юрий Павлович                 Роскомнадзор       ,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=сотрудник ]
+token= 79627298888 start= 0 end= 15 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= МАШЕНИН ЮРИЙ ПАВЛОВИЧ start= 33 end= 59 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ СЛУЖБА ПО НАДЗОРУ В СФЕРЕ СВЯЗИ, ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И МАССОВЫХ КОММУНИКАЦИЙ start= 76 end= 88 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='9 году поступила в МТУСИ, сейчас 5 курс.
+
+Факультет: Автоматической электросвязи информатики и вычислительной', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= КУРС №5; МТУСИ, УНИВЕРСИТЕТ start= 33 end= 39 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МТУСИ  start= 19 end= 24 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ АВТОМАТИЧЕСКОЙ ЭЛЕКТРОСВЯЗИ ИНФОРМАТИКИ start= 42 end= 92 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='96, 97). Составление и сдача отчетности в ИФНС, ПФР, ФСС (в т.ч. персонифицированный учет и НДФЛ)
+
+07.2005 -', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ИНСПЕКЦИЯ; ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА (ФНС), ФЕДЕРАЛЬНАЯ СЛУЖБА start= 42 end= 46 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПЕНСИОННЫЙ ФОНД start= 48 end= 51 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА start= 42 end= 46 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text=': полный день, гибкий график, удаленная работа
+
+Желательное время в пути до работы: не имеет значения
+3 000
+US', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= США start= 108 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Hibernate, Macromedia Dreamweaver/Flash.
+Графические пакеты: Adobe Photoshop, Corel Draw.
+
+
+
+ШАЧКИН ИГОРЬ ЛЕ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= FLASH start= 34 end= 39 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ШАЧКИН ИГОРЬ start= 94 end= 106 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Saint Petersburg
+Team leader
+E-Commerce project for huge retailer in USA. Catalog browse and search functiona', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= CITY SAINT PETERSBURG start= 0 end= 16 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= USA start= 69 end= 72 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Sent: Friday, September 17, 2010 12:29 PM
+
+Subject: Шишкин Дмитрий - резюме
+
+> Гриша, привет!
+> Посмотри резюм', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ШИШКИН ДМИТРИЙ start= 52 end= 66 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='System Analysis and Information Managment (post-graduate study until 2014)
+2013
+Saint Petersburg State Univers', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= CITY SAINT PETERSBURG; STATE UNIVERS start= 80 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= STATE UNIVERS start= 97 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ar 1 month
+
+
+Люксофт
+Saint Petersburg, www.luxoft.com
+Junior QA Specialist
+Testing of Citibank brokerage platf', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= CITIBANK start= 86 end= 94 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= CITY SAINT PETERSBURG start= 21 end= 37 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= luxoft.com start= 39 end= 53 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЛЮКСОФТ start= 13 end= 37 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ar Eastern Federal University
+Mathematics and Computer Sciences faculty, Applied Mathematics and Informatics
+K', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= EASTERN FEDERAL UNIVERSITY start= 3 end= 29 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='cation
+Higher
+2001
+Saint-Petersburg State Technical University
+Faculty of Technical Cybernetic, MR
+Tests, exam', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= CITY SAINT PETERSBURG start= 19 end= 35 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= CYBERNETIC TECHNICAL start= 74 end= 94 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= SAINT PETERSBURG STATE TECHNICAL UNIVERSITY start= 19 end= 62 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='est Software, Oracle 8-9-10-11, DB2, MS SQL, JProbe, Delphi, ESRI ArcView 3.2, MAX PLUS II, Jira, Hudson.
+
+
+
+Н', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= II MAX PLUS start= 79 end= 90 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ORACLE start= 14 end= 20 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='e Project Management  Team management  Spring Framework  JSP  Project management  Git  Intellij IDEA  Scrum
+Ad', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= GIT start= 82 end= 85 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= MANAGEMENT; TEAM MANAGEMENT SPRING FRAMEWORK start= 10 end= 55 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= PROJECT MANAGEMENT start= 62 end= 85 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= TEAM MANAGEMENT SPRING FRAMEWORK start= 22 end= 55 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='g (Услуги ИТ - консалтинга, разработка Интернет - систем)
+
+Исполнительный директор компании
+
+Функции и ответс', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ИНТЕРНЕТ СИСТЕМЫ start= 39 end= 56 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ИТ КОНСАЛТИНГА start= 10 end= 26 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='huge retailer in USA. Catalog browse and facet navigation functionality development.
+development,
+code inspect', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= USA start= 17 end= 20 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='latform.
+Образование
+Высшее
+2012
+Тюменский государственный университет, Тюмень
+Математика.Компьютерные науки.,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД ТЮМЕНЬ start= 33 end= 42 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД ТЮМЕНЬ start= 72 end= 78 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ТЮМЕНСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ start= 33 end= 78 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ra  Atlassian Confluence  Kanban  MS Project  DevOps  server installation and configuration  website building', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= KANBAN ATLASSIAN CONFLUENCE start= 4 end= 32 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='rocesses, St. Petersburg State University
+Saint Petersburg
+Junior researcher
+Science research
+Education
+Master', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= CITY SAINT PETERSBURG; STATE UNIVERSITY start= 10 end= 41 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= CITY SAINT PETERSBURG; STATE UNIVERSITY start= 42 end= 58 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= STATE UNIVERSITY start= 25 end= 41 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='s
+2008
+Saint Petersburg State University Academic Gymnasium.
+Physical and Mathematical class
+Key skills
+Langua', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= CITY SAINT PETERSBURG; STATE UNIVERSITY start= 7 end= 40 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= GYMNASIUM start= 50 end= 59 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= STATE UNIVERSITY start= 24 end= 40 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ter
+
+
+
+Резюме обновлено 17 марта 2014 в 13:48
+
+Шомонова Светлана  •  Резюме обновлено 17 марта 2014 в 13:48', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ШОМОНОВА СВЕТЛАНА start= 48 end= 65 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=2014-03-17 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ve MBA, Kingston University (Стратегический менеджмент, тема
+
+проекта: Сохранение клиентской базы в процессе и', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= KINGSTON UNIVERSITY start= 8 end= 27 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД KINGSTON start= 8 end= 16 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='year 2 months
+
+
+Люксофт
+Saint Petersburg, www.luxoft.com
+QA Specialist
+Testing of Citibank brokerage platform', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= CITIBANK start= 82 end= 90 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= CITY SAINT PETERSBURG start= 24 end= 40 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= luxoft.com start= 42 end= 56 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЛЮКСОФТ start= 16 end= 40 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='АО ДЕКРА-Групп (Инвестиционно-строительный холдинг)- Специалист отдела по связям с общественностью. Декабрь200', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ДЕКОР ГРУППЫ start= 0 end= 51 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ ПО СВЯЗЯМ С ОБЩЕСТВЕННОСТЬЮ start= 64 end= 98 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Вячеславона
+
+
+
+
+
+
+http://hh.ru
+Широких Мария Вячеславовна
+Мобильный телефон
++7 916 1217377
+
+Эл. Почта
+shirok', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= 79161217377 start= 78 end= 92 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= hh.ru start= 20 end= 32 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ШИРОКИХ МАРИЯ ВЯЧЕСЛАВОВНА start= 33 end= 59 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Дата и место рождения: 22.10.1985г. , город Владимир
+
+Гражданство, паспортные данные: РФ, 4511 602302,  выдан', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Ж      ена – Семенова Ольга Павловна – домохозяйка.                            Контакты:                 +', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СЕМЕНОВА ОЛЬГА ПАВЛОВНА start= 13 end= 36 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Зимин Сергей Иванович                 ООО «Кантри      онлайн     »                 Ген. директор', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=сотрудник ]
+token= ЗИМИН СЕРГЕЙ ИВАНОВИЧ start= 0 end= 21 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= КАНТРИ ОНЛАЙН start= 38 end= 67 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Москва
+
+Дом. адрес
+107078, г. Москва, ул. Маши Порываевой, д.38, кв.87
+
+Дата рождения
+16.08.1973
+
+Переезд', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 0 end= 6 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД МОСКВА start= 29 end= 38 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОСКВА, УЛИЦА МАШИ ПОРЫВАЕВОЙ, 38, 87 start= 14 end= 72 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Адрес регистрации value=МОСКВА, УЛИЦА МАШИ ПОРЫВАЕВОЙ, 38, 87 ,  key=Город value=МОСКВА ,  key=Дом value=38 ,  key=Индекс value=107078 ,  key=Квартира value=87 ,  key=Тип места - Адрес value=Тип места - Адрес ,  key=Улица value=улица МАШИ ПОРЫВАЕВОЙ ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Москва, улица Профсоюзная, дом 97, квартира 460.
+Места работы:
+
+	Компания
+	Адрес
+	Телефон
+
+	ООО Линкс
+	115088', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 0 end= 6 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЛИНКС start= 92 end= 101 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+token= МОСКВА, УЛИЦА ПРОФСОЮЗНАЯ, 97, 460 start= 0 end= 47 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Адрес регистрации value=МОСКВА, УЛИЦА ПРОФСОЮЗНАЯ, 97, 460 ,  key=Город value=МОСКВА ,  key=Дом value=97 ,  key=Квартира value=460 ,  key=Тип места - Адрес value=Тип места - Адрес ,  key=Улица value=улица ПРОФСОЮЗНАЯ ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ООО «Система-Т» г.Сочи - строительство линий связи                    ООО «Фирма Империя-Сочи» г.Сочи - с', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД СОЧИ start= 16 end= 22 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД СОЧИ start= 89 end= 93 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД СОЧИ start= 95 end= 101 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ИМПЕРИЯ start= 70 end= 101 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+token= СИСТЕМА Т start= 0 end= 22 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Образование:
+Сентябрь/2001 - Июнь/2006 Московский Университет Приборостроения и Информатики Специальность: Ин', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 39 end= 49 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОСКОВСКИЙ УНИВЕРСИТЕТ ПРИБОРОСТРОЕНИЯ И ИНФОРМАТИКИ start= 39 end= 91 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Отдела развития сервисных платформ и пакетной коммутации             Круг обязанностей   в   ОАО «ВымпелКом  :', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ВЫМПЕЛКОМ start= 93 end= 107 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= ОТДЕЛ РАЗВИТИЯ СЕРВИСНЫХ ПЛАТФОРМ И ПАКЕТНОЙ КОММУТАЦИИ start= 0 end= 56 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Отрадное ОУФМС России по гор. Москве в СВАО_________________________________________________
+4. Адрес регистра', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 25 end= 36 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТРАДНО УПРАВЛЕНИЕ, ГОРОД МОСКВА; ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА (ФМС), ФЕДЕРАЛЬНАЯ СЛУЖБА start= 0 end= 36 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА start= 9 end= 14 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Профессиональный опыт
+
+10.2007 - продолжаю работать, Пронто-Москва
+СМИ
+
+Руководитель продуктовой группы инф', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 61 end= 67 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПРОНТО start= 54 end= 60 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Р Е З Ю М Е
+
+на Шахина Сергея Валентиновича
+
+(Sergei V. Shahin)
+
+Дата рождения: 21.12.1960 г
+
+Моб. телефон: 8', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ШАХИН СЕРГЕЙ ВАЛЕНТИНОВИЧ start= 16 end= 43 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1960-12-21 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Расчет ЗП сотрудников (численность до 400 чел.), отчетность по ЕСН в ИФНС, ПФР и ФСС (в т.ч. персонифициров', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ИНСПЕКЦИЯ; ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА (ФНС), ФЕДЕРАЛЬНАЯ СЛУЖБА start= 69 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПЕНСИОННЫЙ ФОНД start= 75 end= 78 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА start= 69 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Розничная торговля
+Специалист отдела платежных систем и терминальных проектов
+Июль 2007 — Сентябрь 2009
+ООО "', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ПЛАТЕЖНЫХ СИСТЕМ И ТЕРМИНАЛЬНЫХ ПРОЕКТОВ start= 30 end= 77 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Ростелеком ОАО
+Орел, www.rostelecom.ru
+начальник Управления по работе с корпоративным сегментом
+
+- Общее руко', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= rostelecom.ru start= 21 end= 38 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД ОРЕЛ start= 15 end= 19 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РТК start= 0 end= 19 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= УПРАВЛЕНИЕ ПО РАБОТЕ С КОРПОРАТИВНЫМ СЕГМЕНТОМ start= 49 end= 95 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='СЕМЕНОВ ДМИТРИЙ               ЮРЬЕВИЧ                             Родился 01 марта 1975', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СЕМЕНОВ ДМИТРИЙ ЮРЬЕВИЧ start= 0 end= 87 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1975-03-01 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Свердловской области. Имеет паспорт 4507 204640, выданный ОВД МР «Басманный» г. Москвы.
+
+Зарегистрирован по ад', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 77 end= 86 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 58 end= 61 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБЛАСТЬ СВЕРДЛОВСКАЯ start= 0 end= 20 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 58 end= 61 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4507204640, ВЫДАН ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 28 end= 61 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4507204640 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Синтера», директор по развитию бизнеса.
+
+02.2004 – 07.2009 – Федеральное агентство кадастра объектов недвижимо', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СИНТЕРА start= 0 end= 7 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНОЕ АГЕНТСТВО КАДАСТРА ОБЪЕКТОВ start= 61 end= 100 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Смирнова Яна Владиславовна
+26 лет (9 июня 1987)  Москва, м. Бульвар Адмирала Ушакова
+ +7 916 8321213    жел', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= 79168321213 start= 87 end= 101 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= ГОРОД МОСКВА start= 49 end= 55 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СМИРНОВА ЯНА ВЛАДИСЛАВОВНА start= 0 end= 26 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Телекомстрой", г.Сочи - строительство линий связи          ООО «Собар» г.Сочи - строительство линий связи ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД СОЧИ start= 15 end= 21 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД СОЧИ start= 71 end= 77 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СОБАР start= 59 end= 77 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+token= ТЕЛЕКОМСТРОЙ start= 0 end= 12 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Технический Университет Связи и Информатики, факультет АЭС, инженер связи
+
+1986-1990г.  - Московский Электроте', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ СВЯЗИ И ИНФОРМАТИКИ start= 0 end= 43 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ; ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ СВЯЗИ И ИНФОРМАТИКИ start= 0 end= 54 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='УфаНИПИНефть:
+
+✓ написал высокопроизводительный парсер для файлов Eclipse Property (числодробилку) на ANSI C д', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ECLIPSE start= 66 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УФАНИПИНЕФТЬ start= 0 end= 12 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Фамилия Имя Отчество:                     Смирнова Ольга Андреевна', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СМИРНОВА ОЛЬГА АНДРЕЕВНА start= 42 end= 66 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Шомонова Светлана Борисовна
+Женщина, 30 лет, родилась 10 марта 1984
+
++7 (926) 577-54-27 — желаемый способ связ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= 79265775427 start= 69 end= 87 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= ЖЕНЩИНА СВЕТЛАНА БОРИСОВНА start= 9 end= 43 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1984-03-10 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='Шонина Елизавета Александровна
+
+Категорийиный менеджер, руководитель маркетинговой службы
+
+
+	E-mail', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ШОНИНА ЕЛИЗАВЕТА АЛЕКСАНДРОВНА start= 0 end= 90 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='а 2001 года (президентом этой фирмы является его отец – Снытко Евгений Иванович, 1947 года рождения, проживающ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СНЫТКО ЕВГЕНИЙ ИВАНОВИЧ start= 49 end= 99 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='аботать
+Энфорта (ООО "ПРЕСТИЖ-ИНТЕРНЕТ") (Мурманская область, enforta.ru)
+Телекоммуникации/связь
+Технический', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= enforta.ru start= 62 end= 72 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБЛАСТЬ МУРМАНСКАЯ start= 42 end= 60 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПРЕСТИЖ ИНТЕРНЕТ start= 17 end= 39 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+token= ЭНФОРТА start= 8 end= 15 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ала Уфанет https://school.ufanet.ru (85,000+ юзеров на тот момент; в основе Django, ExtJS, Percona): личные ка', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= school.ufanet.ru start= 11 end= 35 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УФАНЕТ start= 4 end= 10 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='алификации молодых специалистов и руководителей в сфере культуры", Немецкая Академия менеджмента Нижней Саксон', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГЕРМАНИЯ start= 67 end= 75 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= НЕМЕЦКАЯ АКАДЕМИЯ МЕНЕДЖМЕНТА start= 67 end= 96 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= САКСОН start= 104 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='аменного Черноморского Флота
+
+1990-1994 г.г. начальник смены – старший инженер отдела отображения и документир', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ОТОБРАЖЕНИЯ И ДОКУМЕНТИР start= 79 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЧЕРНОМОРСКИЙ ФЛОТ start= 9 end= 28 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='амента финансов ОАО «Ростелеком», Смирновой Татьяны Алексеевны, 1962 г.р., сведений компрометирующего характер', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= РОСТЕЛЕКОМ start= 16 end= 32 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= СМИРНОВА ТАТЬЯНА АЛЕКСЕЕВНА start= 34 end= 73 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ация общественных объединений "Нациаональный совет молодежных и детских объединений России"
+	06.2007-02.2008', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= НАЦИАОНАЛЬНЫЙ СОВЕТ МОЛОДЕЖНЫХ И ДЕТСКИХ ОБЪЕДИНЕНИЙ start= 5 end= 91 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='брат – Чуркин Андрей Геннадьевич 02.12.83г.р.      , работает начальником отдела загородной недвижимост', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЧУРКИН АНДРЕЙ ГЕННАДЬЕВИЧ start= 0 end= 45 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1983-12-02 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='был зарегистрирован в общежитии по ул.Б.Галушкина д.11.
+
+В анкете персонала ОАО «Ростелеком» Снытко А.Е. указ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= РОСТЕЛЕКОМ start= 76 end= 92 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= СНЫТКО А Е start= 93 end= 104 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УЛИЦА ГАЛУШКИНА, 11 start= 22 end= 54 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дом value=11 ,  key=Тип места - Адрес value=Тип места - Адрес ,  key=Улица value=улица ГАЛУШКИНА ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='в, входящих в Связьинвест, отчетных форм (Crystal Reports);
+
+· опытно-коммерческая эксплуатация системы: опера', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СВЯЗЬИНВЕСТЫ start= 14 end= 25 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ва Константина, Михайлова Михаила, Морщагина Антона (по совместной работе в ЗАО «СЦС Совинтел»).
+
+Материалами,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МИХАЙЛОВ МИХАИЛ start= 16 end= 33 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОРЩАГИН АНТОН start= 35 end= 51 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СЦС СОВИНТЕЛ start= 76 end= 94 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ЗАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='верситет Связи и Информатики, факультет экономики и управления.
+
+Специализация: экономика и управление на пред', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ФАКУЛЬТЕТ ЭКОНОМИКИ И УПРАВЛЕНИЯ start= 30 end= 62 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='вич, 29.07.1981 года рождения, уроженец г. Днепропетровск.
+
+Имеет паспорт серии: 4501, № 529542, выданный РОВД', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД ДНЕПРОПЕТРОВСК start= 40 end= 57 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 106 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4501529542, ВЫДАН РАЙОННЫЙ ОТДЕЛ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 66 end= 110 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4501529542 ]
+token= РАЙОННЫЙ ОТДЕЛ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 106 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='вки, семинары и пр.)
+
+27.11.2001 г-06.12.2001 г.
+Академия труда и социальных отношений
+Удостоверение о повышен', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= АКАДЕМИЯ ТРУДА И СОЦИАЛЬНЫХ ОТНОШЕНИЙ start= 49 end= 86 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='г.р.      , уроженец             с. Рожки                Малмыжского        р-на Кировской области;', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОБЛАСТЬ КИРОВСКАЯ start= 81 end= 98 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РАЙОН МАЛМЫЖСКИЙ start= 57 end= 98 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СЕЛО РОЖКИ start= 33 end= 41 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='гг.
+	Акционерный коммерческий банк «ИНКАРОБАНК», начальник отдела делопроизводства и работы с персоналом.
+
+Вып', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ИНКАРОБАНК start= 5 end= 47 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ ДЕЛОПРОИЗВОДСТВА И РАБОТЫ С ПЕРСОНАЛОМ start= 59 end= 104 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='года в городе Волгограде. Паспорт 1803   976508 выдан 21.07.2003 года ОВД        Тракторозаводского        ра', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД ВОЛГОГРАД start= 7 end= 24 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 70 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 70 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №1803976508, ВЫДАН 21 ИЮЛЯ 2003 ГОДА ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 26 end= 73 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=1803976508 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='города Владивостока.
+Декабрь 2008 – Октябрь 2009 ОАО «Новая Телефонная Компания», Ведущий sales-менеджер IT у', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД ВЛАДИВОСТОК start= 0 end= 19 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= НОВАЯ ТЕЛЕФОННАЯ КОМПАНИЯ start= 49 end= 80 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='дий Петрович 24.05.60г.р., работает учителем МОАУ «Лицей № 21» (г. Киров);             мать – Чуркина Любовь А', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЛИЦЕЙ №21 start= 50 end= 62 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЧУРКИНА ЛЮБОВЬ start= 87 end= 108 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1960-05-24 ]
+token= г. Киров start= 64 end= 72 class= Место tokenExtractorName= Место регулярн. tokenExtractorType= REGEX
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='е образование
+2007
+Российская академия народного хозяйства и государственной службы при Президенте РФ, Москва', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 103 end= 109 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РОССИЙСКАЯ АКАДЕМИЯ НАРОДНОГО ХОЗЯЙСТВА И ГОСУДАРСТВЕННОЙ СЛУЖБЫ start= 19 end= 83 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ев)
+МТС (Саратов, www.mts.ru) — Телекоммуникации, связь
+Ведущий специалист Отдела по работе с ключевыми клиент', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= mts.ru start= 18 end= 28 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МТС start= 4 end= 7 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ ПО РАБОТЕ С КЛЮЧЕВЫМИ КЛИЕНТ start= 75 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='едседатель
+	+7 (495) 621-08-71
+
+89166743918
+
+	Габриелян Николай
+
+
+	ООО «ФИНАМ»
+	Руководитель отдела маркетинга', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=руководитель ]
+[ key=Комментарий value=сотрудник ]
+token= 74956210871 start= 12 end= 30 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= 79166743918 start= 32 end= 43 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= ГАБРИЕЛЯН НИКОЛАЙ start= 46 end= 63 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ МАРКЕТИНГА start= 93 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФИНАМ start= 67 end= 78 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='едставилось возможным.
+
+Доцент кафедры экологии Кораблева С.В. подтвердила, что на ее специальности обучался Р', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= КАФЕДРА ЭКОЛОГИИ start= 31 end= 57 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= КОРАБЛЕВА start= 48 end= 57 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='еевич родился 07 ноября 1980 года в г. Москве. Имеет паспорт 4506   907309, выданный РОВД Покровское-Стрешнево', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 36 end= 45 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 85 end= 89 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4506907309, ВЫДАН РАЙОННЫЙ ОТДЕЛ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 53 end= 89 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4506907309 ]
+token= РАЙОННЫЙ ОТДЕЛ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 85 end= 89 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ействовал с надзорными органами (Роскомнадзор, УФСБ, Администрация, Ростехнадзор, СЭС);
+•	подбирал и обучал те', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= УПРАВЛЕНИЕ; ФЕДЕРАЛЬНАЯ СЛУЖБА БЕЗОПАСНОСТИ (ФСБ) start= 47 end= 51 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ СЛУЖБА БЕЗОПАСНОСТИ start= 47 end= 51 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ СЛУЖБА ПО НАДЗОРУ В СФЕРЕ СВЯЗИ, ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И МАССОВЫХ КОММУНИКАЦИЙ start= 33 end= 45 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ СЛУЖБА ПО ЭКОЛОГИЧЕСКОМУ, ТЕХНОЛОГИЧЕСКОМУ И АТОМНОМУ НАДЗОРУ start= 68 end= 80 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='зьинвест», создание организационной структуры, ресурсное обеспечение.
+
+Январь 2004 – февраль 2006, ТопС Бизне', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ТОПС start= 100 end= 104 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='и ОАО «Ростелеком».
+
+	Образование
+	2001-2006 Московский Технический Университет Связи и Информатики (дневная ф', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 45 end= 55 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОСКОВСКИЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ СВЯЗИ И ИНФОРМАТИКИ start= 45 end= 99 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РОСТЕЛЕКОМ start= 2 end= 18 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='и и Информатики (МТУСИ).
+Факультет: Радиотехника
+Присвоена квалификация инженера по специальности «Радиотехни', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МТУСИ  start= 16 end= 23 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ РАДИОТЕХНИКА start= 26 end= 49 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='и. Паспорт 7507   055905 выдан отделением №3 УФМС России по Челябинской области в Ленинском районе г. Магнитог', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МАГНИТОГ start= 99 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБЛАСТЬ ЧЕЛЯБИНСКАЯ start= 60 end= 79 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛЕНИЕ №3; УПРАВЛЕНИЕ, РАЙОН ЛЕНИНСКИЙ; ГОРОД МАГНИТОГ; ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА (ФМС), ФЕДЕРАЛЬНАЯ СЛУЖБА, РОССИЯ start= 31 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №7507055905, ВЫДАН ОТДЕЛЕНИЕ №3; УПРАВЛЕНИЕ, РАЙОН ЛЕНИНСКИЙ; ГОРОД МАГНИТОГ; ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА (ФМС), ФЕДЕРАЛЬНАЯ СЛУЖБА, РОССИЯ start= 3 end= 110 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=7507055905 ]
+token= РАЙОН ЛЕНИНСКИЙ; ГОРОД МАГНИТОГ start= 60 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УПРАВЛЕНИЕ, РАЙОН ЛЕНИНСКИЙ; ГОРОД МАГНИТОГ; ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА (ФМС), ФЕДЕРАЛЬНАЯ СЛУЖБА, РОССИЯ start= 45 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА start= 45 end= 56 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ивычек
+
+РЕЗЮМЕ
+
+Ф.И.О.
+
+
+СОЛДАТЕНКОВ Вячеслав Иванович
+
+О себе
+
+24 февраля 1947, г.Москва
+
+
+
+
+Женат, дочь 197', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 82 end= 90 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СОЛДАТЕНКОВ ВЯЧЕСЛАВ ИВАНОВИЧ start= 25 end= 54 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='игорска Ставропольского края.
+
+Имеет паспорт серии 45 06 № 630080, выданный ОВД «Даниловский» г. Москвы, 25.09', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 94 end= 103 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ДАНИЛОВСКИЙ start= 76 end= 103 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= КРАЙ СТАВРОПОЛЬЕ start= 8 end= 28 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 76 end= 79 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4506630080, ВЫДАН ДАНИЛОВСКИЙ, ГОРОД МОСКВА; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 37 end= 103 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4506630080 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='изации и архивации Монитор-Э в центре приема космичексой информации «Отрадное», г.Москва;
+Разработка прикладн', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 80 end= 88 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТРАДНОЕ start= 68 end= 88 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='информационных ресурсов
+
+органов государственной власти Российской Федерации ФАПСИ
+
+(ведущая государственная', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ФЕДЕРАЛЬНОЕ АГЕНТСТВО ПРАВИТЕЛЬСТВЕННОЙ СВЯЗИ start= 77 end= 82 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='исоединено к ОАО МТС, перешел в компанию при присоединении)
+Москва, www.comstar.ru — Информационные технологии', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= comstar.ru start= 68 end= 82 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД МОСКВА start= 60 end= 66 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МТС start= 13 end= 20 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= МТС start= 30 end= 40 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='их структуре действительно работает мать кандидата – Романюк Татьяна Константиновна,  заместитель начальник от', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= РОМАНЮК ТАТЬЯНА КОНСТАНТИНОВНА start= 41 end= 107 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='й учёт и аудит.
+
+Трудовую деятельность начала в ноябре 1995 года. Работала бухгалтером в ФГУП «Почта России».', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ПОЧТА start= 89 end= 108 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='каналы "последняя миля" (проводные, радио и спутниковые каналы) в Мурманской области;
+•	проводил планирование', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОБЛАСТЬ МУРМАНСКАЯ start= 66 end= 84 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПОСЛЕДНЯЯ МИЛЯ start= 7 end= 23 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='кве. Имеет паспорт4508   758179, выданный отделением по р-ну Обручевский ОУФМС России по г. Москве в ЮЗАО.
+
+За', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 89 end= 98 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБРУЧЕВСКОЕ УПРАВЛЕНИЕ, ГОРОД МОСКВА; ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА (ФМС), ФЕДЕРАЛЬНАЯ СЛУЖБА, РОССИЯ start= 61 end= 98 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4508758179 start= 11 end= 41 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4508758179 ]
+token= ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА start= 73 end= 85 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='кем выдан:    26.06.2009 отделом УФМС России по Ростовской обл. в Ворошиловском р-не города Ростова-на-Дону.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД РОСТОВ-НА-ДОНУ start= 85 end= 107 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБЛАСТЬ РОСТОВСКАЯ start= 48 end= 63 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ, РАЙОН ВОРОШИЛОВСКИЙ; ГОРОД РОСТОВ-НА-ДОНУ; УПРАВЛЕНИЕ, ОБЛАСТЬ РОСТОВСКАЯ; ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА (ФМС), ФЕДЕРАЛЬНАЯ СЛУЖБА, РОССИЯ start= 25 end= 107 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РАЙОН ВОРОШИЛОВСКИЙ; ГОРОД РОСТОВ-НА-ДОНУ start= 66 end= 107 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УПРАВЛЕНИЕ, ОБЛАСТЬ РОСТОВСКАЯ; ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА (ФМС), ФЕДЕРАЛЬНАЯ СЛУЖБА, РОССИЯ start= 33 end= 63 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ МИГРАЦИОННАЯ СЛУЖБА start= 33 end= 44 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ки, и расходных материалов. - Консультации по товару - Работа на кассе - Сборка ПК. ЗАО Кафе-Макс
+
+Август/200', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ком», не располагаем.
+
+12.11.2007.
+
+
+Sokolova Лилия Александровна
+
+
+
+
+
+
+http://hh.ru
+Соколова Лилия Алексан', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= hh.ru start= 75 end= 87 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СОКОЛОВА ЛИЛИЯ start= 88 end= 102 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='космический факультет (в настоящее время – факультет транспорта, нефти и газа).
+
+Декан факультета Бельков В.Н.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= БЕЛЬКОВЫЙ ФАКУЛЬТЕТ start= 87 end= 105 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ ТРАНСПОРТА, НЕФТИ И ГАЗА start= 43 end= 77 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='кументации;
+
+	Август 1996 — Апрель 1997
+9 месяцев
+
+	Орловский ОРТПЦ
+Орел
+старший электромеханник
+
+- оперативн', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД ОРЕЛ start= 69 end= 73 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОРЛОВСКИЙ ОРТПЦ start= 53 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='легко обучаема, умение работать в команде, стрессоустойчивость.
+
+
+
+
+
+
+
+Рыгалов Роман Сергеевич
+24 года (24 ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= РЫГАЛОВ РОМАН СЕРГЕЕВИЧ start= 74 end= 97 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='лектрохозяйство предприятий, организаций и учреждений».              Родители:             отец – Чуркин Генна', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЧУРКИН ГЕННА start= 91 end= 110 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='лиц.
+Образование
+2015	Академия труда и социальных отношений (ВШПД ВЦСПС им. Н.М. Шверника), Москва
+
+Материала', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= АКАДЕМИЯ ТРУДА И СОЦИАЛЬНЫХ ОТНОШЕНИЙ start= 22 end= 59 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ВСЕСОЮЗНЫЙ ЦЕНТРАЛЬНЫЙ СОВЕТ ПРОФЕССИОНАЛЬНЫХ СОЮЗОВ start= 66 end= 89 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД МОСКВА start= 92 end= 98 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='луг и отслеживание их оплаты.
+
+05.2004 - 02.2006 , Натали-Турс
+ведущий специалист визового отдела
+
+организац', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= НАТАЛИ ТУРС start= 52 end= 63 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='льный опыт
+
+
+
+
+2007-05 - ОАО АКБ "Связь-Банк"
+начальник отдела организации PR-мероприятий
+
+- создание отдела', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ОРГАНИЗАЦИИ start= 58 end= 76 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СВЯЗЬ БАНК start= 26 end= 46 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='м Гендиректора, его «правой рукой», фактически вторым человеком в компании.
+
+ В настоящее время из-за преступн', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ПРАВОЙ РУКОЙ start= 20 end= 34 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПРАВОЙ РУКОЙ start= 64 end= 74 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='м должности)
+	Адрес организации, предприятия, учреждения
+
+	Поступления
+	Ухода
+
+
+
+	07.1996
+	12.96
+	ГУ УПФРФ в', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГЛАВНОЕ УПРАВЛЕНИЕ start= 100 end= 102 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПЕНСИОННЫЙ ФОНД start= 103 end= 108 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= УПРАВЛЕНИЕ; ПЕНСИОННЫЙ ФОНД (ПФРФ), РОССИЯ start= 103 end= 108 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='м.
+25.10.12
+
+
+Широкова Татьяна Андреевна
+
+Родилась 20 апреля 1986 года  в г. Москве. Паспорт 4508   164260 выд', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 74 end= 83 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4508164260 start= 85 end= 106 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4508164260 ]
+token= ШИРОКОВА ТАТЬЯНА АНДРЕЕВНА start= 14 end= 70 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1986-04-20 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='математика и информатика, Кафедра программирования и экономической информатики
+Ключевые навыки
+Знание языков
+Р', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= КАФЕДРА ПРОГРАММИРОВАНИЯ И ЭКОНОМИЧЕСКОЙ ИНФОРМАТИКИ start= 26 end= 78 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='на аттестат профбухгалтера, Институт профессиональных бухгалтеров и аудиторов России, Аттестат профессиональн', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ИНСТИТУТ ПРОФЕССИОНАЛЬНЫХ БУХГАЛТЕРОВ И АУДИТОРОВ start= 28 end= 84 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='невозможен
+
+
+
+
+Образование
+
+
+
+основное
+
+
+
+2009 - Московский Технический Университет Связи и Информатики С', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 53 end= 63 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОСКОВСКИЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ СВЯЗИ И ИНФОРМАТИКИ start= 53 end= 107 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ника: мини-АТС, факс, копировальный аппарат, сканер
+
+
+
+
+
+
+Яхина Рената Анверовна
+
+Дата рождения: 27.07.198', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЯХИНА РЕНАТА АНВЕРОВНА start= 62 end= 84 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='нкт-Петербург                                               Район проживания:                              Нев', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД САНКТ-ПЕТЕРБУРГ start= 4 end= 13 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ный филиал ОАО” МегаФон”,
+Руководитель отдела маркетингового планирования и анализа
+
+Подчинение директору по', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МЕГАФОН start= 16 end= 23 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ МАРКЕТИНГОВОГО ПЛАНИРОВАНИЯ И АНАЛИЗА start= 40 end= 84 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ным сегментом, Отделом по работе с корпоративными клиентами с целью устранения проблем в обслуживании абоненто', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ПО РАБОТЕ С КОРПОРАТИВНЫМИ КЛИЕНТАМИ С ЦЕЛЬЮ УСТРАНЕНИЯ ПРОБЛЕМ В ОБСЛУЖИВАНИИ АБОНЕНТО start= 15 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ов Антон  •  Резюме обновлено 23 ноября 2016 в 12:45Абрамов Антон Михайлович
+Мужчина, 25 лет, родился 5 август', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= АБРАМОВ АНТОН МИХАЙЛОВИЧ start= 3 end= 8 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= АБРАМОВ АНТОН МИХАЙЛОВИЧ start= 52 end= 76 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ования обстановки Центра Управления Космической связи и Навигации  ВМФ
+
+1994-1996 г.г. – начальник отделения с', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ВОЕННО МОРСКОЙ ФЛОТ start= 67 end= 70 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЦЕНТР УПРАВЛЕНИЯ КОСМИЧЕСКОЙ СВЯЗИ И НАВИГАЦИИ start= 18 end= 70 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='опряжения отдела отображения документирования обстановки Центра Управления Космической связи и Навигации  ВМФ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ВОЕННО МОРСКОЙ ФЛОТ start= 106 end= 109 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ ОТОБРАЖЕНИЯ ДОКУМЕНТИРОВАНИЯ ОБСТАНОВКИ start= 10 end= 109 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЦЕНТР УПРАВЛЕНИЯ КОСМИЧЕСКОЙ СВЯЗИ И НАВИГАЦИИ start= 57 end= 104 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ории "В", автомобиль.
+
+
+
+Менеджер проектов/Специалист отдела управления проектами  ·  Савельева Ольга
+Менеджер', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ УПРАВЛЕНИЯ ПРОЕКТАМИ start= 54 end= 81 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= САВЕЛЬЕВА ОЛЬГА start= 25 end= 42 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= САВЕЛЬЕВА ОЛЬГА start= 86 end= 110 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='орма):
+· Факультет: Сети и системы связи.
+
+· Специальность: Сети связи и системы коммутаций.
+Диплом с отличием', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СЕТЬ СВЯЗИ start= 60 end= 70 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ СЕТИ И СИСТЕМЫ СВЯЗИ start= 9 end= 40 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='оссии, полковник запаса.
+
+Планируется к назначению на должность -  Советник Президента ОАО «Ростелеком». Канди', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ПРЕЗИДЕНТА start= 76 end= 86 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РОСТЕЛЕКОМ start= 87 end= 103 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ости филиалов.
+
+Конец формы
+
+
+
+Резюме
+
+Щевьёва Ксения Владимировна
+
+141420 Россия, Моск. обл., г. Химки
+мкр.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД ХИМКИ start= 96 end= 104 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЩЕВЬЕВА КСЕНИЯ ВЛАДИМИРОВНА start= 40 end= 67 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='от него. По словам одного из знакомых Ромашина из «Мегафона» он  «исчерпал лимит воровства в компании».
+
+Сред', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МЕГАФОН start= 50 end= 60 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МЕГАФОН start= 91 end= 101 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='оты
+	Адрес
+	Телефон
+
+	специалист по работе с молодежью  Администрация города Владимира,
+
+	11.2002-09.2004
+	60', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= АДМИНИСТРАЦИЯ, ГОРОД ВЛАДИМИР start= 56 end= 86 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД ВЛАДИМИР start= 70 end= 86 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='очный государственный университет
+
+Дальневосточный институт инновационных технологий и качества
+
+
+
+
+
+Специальн', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ДАЛЬНЕВОСТОЧНЫЙ ИНСТИТУТ ИННОВАЦИОННЫХ ТЕХНОЛОГИЙ И КАЧЕСТВА start= 6 end= 95 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='пасности: ФГУП «Почта России», "Информатизация здравоохранения Мурманской области", «Безопасная школа» и др.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= БЕЗОПАСНАЯ ШКОЛА start= 84 end= 102 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ИНФОРМАТИЗАЦИЯ ЗДРАВООХРАНЕНИЯ start= 31 end= 82 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБЛАСТЬ МУРМАНСКАЯ start= 63 end= 81 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПОЧТА start= 10 end= 29 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='паспорт серии: 4500, № 333553, выданный ОВД «Бабушкинский» г. Москвы, 14.08.2000 года.
+
+Прописана и проживает', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= БАБУШКИНСКИЙ start= 40 end= 68 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД МОСКВА start= 59 end= 68 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 40 end= 43 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4500333553, ВЫДАН 14 АВГУСТА 2000 ГОДА БАБУШКИНСКИЙ, ГОРОД МОСКВА; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 0 end= 85 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4500333553 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='пециалист отдела рекламы ДПМ, Кульева Наталья -  главный специалист отдела рекламы ДПМ.
+
+Материалами, препятст', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=главный специалист ]
+token= КУЛЬЕВА НАТАЛЬЯ start= 30 end= 82 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ РЕКЛАМЫ start= 10 end= 24 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ РЕКЛАМЫ start= 68 end= 82 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='подавание французского и немецкого языков
+
+Рекомендации
+
+· Клуб Делового Туризма
+Солотова Елена , директор
+(', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= КЛУБ ДЕЛОВОГО ТУРИЗМА start= 60 end= 81 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СОЛОТОВ ЕЛЕН start= 83 end= 108 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='положительно.
+
+В ОАО «Ростелеком» знаком с Елисеевой Марией Сергеевной и Козиной Мариной Сергеевной (по совме', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЕЛИСЕЕВА МАРЬЯ СЕРГЕЕВНА start= 44 end= 71 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= КОЗИНА МАРИНА СЕРГЕЕВНА start= 74 end= 100 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РОСТЕЛЕКОМ start= 18 end= 34 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='предприятия)
+
+- Организовал построение «под ключ» мультисервисной сети предприятия энергетики
+- Оптимизировал', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ПОД КЛЮЧ start= 39 end= 49 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='принадлежит Минаевой Галине Дмитриевне, 1942 года рождения; жилая площадь квартиры – 19,4 кв.м.). Телефон – (0', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МИНАЕВА ГАЛИНА ДМИТРИЕВНА start= 12 end= 58 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='проектов/Специалист отдела управления проектами  ·  Савельева Ольга
+
+
+аа,
+
+
+
+
+Савельева Ольга Александровна
+2', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ УПРАВЛЕНИЯ ПРОЕКТАМИ start= 20 end= 47 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= САВЕЛЬЕВА ОЛЬГА АЛЕКСАНДРОВНА start= 52 end= 67 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= САВЕЛЬЕВА ОЛЬГА АЛЕКСАНДРОВНА start= 78 end= 107 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='равка
+по кандидату Савицкому Алексею Николаевичу, 1985 г.р. ур.г.Архангельска, инженеру 2 категории Группы упр', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД АРХАНГЕЛЬСК start= 63 end= 77 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= САВИЦКИЙ АЛЕКСЕЙ НИКОЛАЕВИЧ start= 9 end= 59 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='раждане Азербайджана: Гайдаров А.Б.15.01.68г.р., Гайдаров Н.Б. 18.04.70 г.р.;
+
+граждане РФ: Закирова Г.Н. 03.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= АЗЕРБАЙДЖАН start= 8 end= 20 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГАЙДАРОВ А Б start= 22 end= 35 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГАЙДАРОВ Н Б start= 49 end= 76 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1970-04-18 ]
+token= УЛИЦА ЗАКИРОВА, 3 start= 93 end= 109 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дом value=3 ,  key=Тип места - Адрес value=Тип места - Адрес ,  key=Улица value=улица ЗАКИРОВА ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='рам гражданско-правового характера. Составление и сдача отчетности в ИФНС, ПФР, ФСС (в т.ч. персонифицированны', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ИНСПЕКЦИЯ; ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА (ФНС), ФЕДЕРАЛЬНАЯ СЛУЖБА start= 69 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПЕНСИОННЫЙ ФОНД start= 75 end= 78 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА start= 69 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ратуры,
+немецкий - чтение со словарем.
+
+Водительские права:
+категория «В» с 1999 года.
+
+
+	Щукин Эдуард
+
+фина', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ФИНЛЯНДИЯ start= 106 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЩУКИН ЭДУАРД start= 91 end= 110 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='рганизации связи для подключения клиентов предприятия (управление отделом инженеров и техников, до 5 человек)', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ИНЖЕНЕРОВ И ТЕХНИКОВ start= 66 end= 94 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='резентаций, Билайн -Университет, Сертификат
+
+· 2006 — Процессный подход к управлению компанией, Институт экон', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= BEELINE start= 12 end= 18 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= BEELINE start= 73 end= 85 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='результат.
+
+Контактная
+
+Домашний адрес: Россия, Москва, ул. Дыбенко, д.18, кор. 1, кв. 49
+
+информация
+
+Тел.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 49 end= 55 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РОССИЯ, МОСКВА, УЛИЦА ДЫБЕНКО, 18, 49 start= 34 end= 90 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Адрес регистрации value=РОССИЯ, МОСКВА, УЛИЦА ДЫБЕНКО, 18, 49 ,  key=Город value=МОСКВА ,  key=Дом value=18 ,  key=Квартира value=49 ,  key=Корпус value=1 ,  key=Страна value=Россия ,  key=Тип места - Адрес value=Тип места - Адрес ,  key=Улица value=улица ДЫБЕНКО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='рирование
+Магистр
+
+2007 - ИСПИ РАН Экономика
+
+Кандидат наук
+
+
+
+Трудовая деятельность:
+
+02.2010 – н/в – ООО Тор', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= РОССИЙСКАЯ АКАДЕМИЯ НАУК start= 31 end= 34 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ТОР start= 103 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ругой сайт: https://github.com/nazarov-tech
+
+Проживает: Санкт-Петербург, м. Чёрная речка
+Гражданство: Россия,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= github.com/nazarov-tech start= 6 end= 43 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД САНКТ-ПЕТЕРБУРГ start= 56 end= 71 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='сервисов на 30%, запуск 5 новых сервисов по приему и оплате объявлений, в том числе wap- версии сайта www.irr', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= irr start= 96 end= 109 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='сноярск
+Институт космических и информационных технологий (ИКИТ), Компьютерная безпасность
+2012
+Moscow Business', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД MOSCOW start= 95 end= 101 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='состоит в зарегистрированном браке             жена – Чуркина Ольга Владимировна 15.11.83г.р., ра', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЧУРКИНА ОЛЬГА ВЛАДИМИРОВНА start= 47 end= 93 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1983-11-15 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='спасибо.
+>
+> Шишкин Дмитрий.
+>
+Шишкин Дмитрий Александрович
+
+Основное образование
+
+1994-2000г. - Московский', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ШИШКИН ДМИТРИЙ АЛЕКСАНДРОВИЧ start= 14 end= 28 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ШИШКИН ДМИТРИЙ АЛЕКСАНДРОВИЧ start= 32 end= 60 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='спорт 4504   358797 выдан ОВД района Северное Бутово гор. Москвы 24 октября 2002 года.
+
+Зарегистрирован и прож', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 53 end= 64 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 26 end= 29 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛЕНИЕ, РАЙОН СЕВЕРНОЕ БУТОВО, ГОРОД МОСКВА; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 26 end= 64 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РАЙОН СЕВЕРНОЕ БУТОВО start= 30 end= 52 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ссертация.
+Высшее образование
+2013
+Российская академия народного хозяйства и государственной службы при Презид', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= РОССИЙСКАЯ АКАДЕМИЯ НАРОДНОГО ХОЗЯЙСТВА И ГОСУДАРСТВЕННОЙ СЛУЖБЫ start= 35 end= 99 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ста 1971 года в г. Москве. Имеет паспорт 4505   997719, выданный ОВД МР «Сокол» г. Москвы 05 сентября 2003 год', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 16 end= 25 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД МОСКВА start= 80 end= 89 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 65 end= 68 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 65 end= 68 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4505997719, ВЫДАН ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 33 end= 68 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4505997719 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='старший инженер, начальник вычислительной машины Московского авиационного института им. С.Орджоникидзе, г. Мос', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОС start= 104 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД МОСКВА start= 49 end= 60 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД ОРДЖОНИКИДЗЕ start= 90 end= 102 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОСКОВСКИЙ АВИАЦИОННЫЙ ИНСТИТУТ start= 49 end= 83 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОРДЖОНИКИДЗЕ С start= 88 end= 102 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='сти на предприятии, ЦНТИ
+2010  — Строительство пассивных оптических сетей, Учебный центр, Лентелефонстрой
+2009', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЛЕНТЕЛЕФОНСТРОЙ start= 90 end= 105 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЦНТИ start= 20 end= 24 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ститута.
+
+После окончания учёбы с 2004 по 2006 год проходил срочную службу в Космических войсках РФ в г. Красн', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД КРАСН start= 102 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='сть главного специалиста отдела сопровождения эмиссии и обращения акций ДКУ ОАО «Ростелеком», не располагаем.', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ СОПРОВОЖДЕНИЯ ЭМИССИИ И ОБРАЩЕНИЯ АКЦИЙ start= 25 end= 71 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РОСТЕЛЕКОМ start= 76 end= 92 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='т паспорт 4505   012186, выданный ОВД Чертаново-Северное г. Москвы 31.12.2002 года.
+
+Зарегистрирован и прожива', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 57 end= 66 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 34 end= 37 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №4505012186, ВЫДАН 31 ДЕКАБРЯ 2002 ГОДА ЧЕРТАНОВО СЕВЕРНОЕ, ГОРОД МОСКВА; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 2 end= 82 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=4505012186 ]
+token= ЧЕРТАНОВО СЕВЕРНОЕ start= 34 end= 66 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='та 1985 года в г. Торжке Тверской области. Имеет паспорт 2804   577052, выданный Торжокским ОВД Тверской облас', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД ТОРЖОК start= 15 end= 41 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 92 end= 95 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБЛАСТЬ ТВЕРСКАЯ start= 25 end= 41 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПАСПОРТ №2804577052, ВЫДАН ТОРЖОКСКОЕ ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 49 end= 95 class= Паспорт tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Серия и Номер value=2804577052 ]
+token= ТОРЖОКСКОЕ ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 81 end= 95 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='та доходов и расходов отдела формирования и учёта доходов и расходов по услугам связи бухгалтерии ОАО «Ростеле', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ФОРМИРОВАНИЯ И УЧЕТА ДОХОДОВ И РАСХОДОВ ПО УСЛУГАМ СВЯЗИ start= 22 end= 85 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='твенного сегментов.                       Семенов Дмитрий Юрьевич в отрасли связи с 2005г. Начал свою работу с', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= СЕМЕНОВ ДМИТРИЙ ЮРЬЕВИЧ start= 42 end= 65 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= г. Начал start= 88 end= 96 class= Место tokenExtractorName= Место регулярн. tokenExtractorType= REGEX
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='твий сотрудников Группы анализа и контроля инцидентов и выделенных в МРКЦ Координаторов инцидентов в части фун', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='тельный университет», кафедра Информационных систем и технологий, старший лаборант.                февраль 201', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= КАФЕДРА ИНФОРМАЦИОННЫХ СИСТЕМ И ТЕХНОЛОГИЙ start= 22 end= 64 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='тия.
+
+04.2004 – 11.2004 – Росстрой (СУ-155), маркетолог.
+
+10.2001 – 03.2004 – Система-Галс (АФК Система), анал', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='торинга
+
+03.1997 - 07.1997 - Спецкомиссия ООН по Ираку, Центр Мониторинга и контроля (Багдад, Ирак)
+
+Руководит', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД БАГДАД start= 86 end= 98 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ИРАК start= 49 end= 54 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ИРАК start= 94 end= 98 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОРГАНИЗАЦИЯ ОБЪЕДИНЕННЫХ НАЦИЙ start= 42 end= 54 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЦЕНТР МОНИТОРИНГА start= 42 end= 99 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ть, легко обучаем, отсутствие вредных привычек.
+
+
+
+
+Ющик Екатерина Алексеевна
+
+Бухгалтер по расчету заработ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЮЩИК ЕКАТЕРИНА АЛЕКСЕЕВНА start= 54 end= 110 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='уб Делового Туризма
+Туризм/гостиницы/рестораны
+
+главный специалист отдела протокола и визовой поддержки
+
+орга', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ДЕЛОВОГО ТУРИЗМА start= 3 end= 19 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ ПРОТОКОЛА И ВИЗОВОЙ ПОДДЕРЖКИ ОРГА start= 67 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='уб. и ОАО Липецкмолоко» - сумма взноса в УФ – 186 000 руб.
+
+В 2000 году доход Снытко в компании ОАО Нефтяная и', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= 186.000 RUB start= 46 end= 58 class= Предмет tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЛИПЕЦКМОЛОКО start= 6 end= 22 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= ЛИПЕЦКМОЛОКО start= 85 end= 95 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+token= НЕФТЯНАЯ start= 96 end= 108 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='уживания отдела капитального строительства и материально-технического обеспечения Кировского филиала ОАО «Рост', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= КИРОВСКИЙ ФИЛИАЛ start= 82 end= 100 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛ КАПИТАЛЬНОГО СТРОИТЕЛЬСТВА И МАТЕРИАЛЬНО ТЕХНИЧЕСКОГО ОБЕСПЕЧЕНИЯ start= 9 end= 81 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='уровень)
+
+
+Шаброва Алена Алексеевна
+
+Дата последнего изменения резюме:   13.08.2009 19:43
+Дата рождения:: ', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ШАБРОВА АЛЕНА АЛЕКСЕЕВНА start= 13 end= 37 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=2009-08-13 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='х ГУ МЧС России по Мурманской области;
+3. организовал строительство комплексной системы контроля управления до', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГЛАВНОЕ УПРАВЛЕНИЕ, ОБЛАСТЬ МУРМАНСКАЯ; МИНИСТЕРСТВО ПО ДЕЛАМ ГРАЖДАНСКОЙ ОБОРОНЫ, ЧРЕЗВЫЧАЙНЫМ СИТУАЦИЯМ И ЛИКВИДАЦИИ ПОСЛЕДСТВИЙ СТИХИЙНЫХ БЕДСТВИЙ (МЧС), РОССИЯ start= 2 end= 37 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ПО ДЕЛАМ ГРАЖДАНСКОЙ ОБОРОНЫ, ЧРЕЗВЫЧАЙНЫМ СИТУАЦИЯМ И ЛИКВИДАЦИИ ПОСЛЕДСТВИЙ СТИХИЙНЫХ БЕДСТВИЙ start= 5 end= 15 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОБЛАСТЬ МУРМАНСКАЯ start= 19 end= 37 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='х зданий.
+
+Апрель 2006г.- Август 2007г.   МЕГАФОН  (ЗАО «Мобиком - Хабаровск»)  Инженер сектора эксплуатации т', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД ХАБАРОВСК start= 67 end= 76 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МЕГАФОН start= 42 end= 49 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОБИКОМ start= 52 end= 77 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ЗАО ]
+token= СЕКТОР ЭКСПЛУАТАЦИИ start= 88 end= 108 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='х мероприятий отдела международного сотрудничества Управления организационного обеспечения и внешних связей ОА', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ МЕЖДУНАРОДНОГО СОТРУДНИЧЕСТВА УПРАВЛЕНИЯ ОРГАНИЗАЦИОННОГО ОБЕСПЕЧЕНИЯ И ВНЕШНИХ СВЯЗЕЙ start= 14 end= 107 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='хнический техникум, специальность Техник-технолог
+
+Дополнительное образование, сертификаты
+
+1999г. Мультиплекс', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МУЛЬТИПЛЕКС start= 99 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='циалист-эксперт
+
+	брат
+	Семёнов Андрей Михайлович
+	20.09.1975
+	ЗАО «Ростовская Сотовая Связь», специалист по л', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОБЛАСТЬ РОСТОВСКАЯ start= 63 end= 78 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СЕМЕНОВ АНДРЕЙ МИХАЙЛОВИЧ start= 0 end= 49 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1975-09-20 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='циалиста, заместителя начальника отдела ценных бумаг и рынков капитала.
+
+В настоящее время продолжает работу в', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ОТДЕЛ ЦЕННЫХ БУМАГ И РЫНКОВ КАПИТАЛА start= 33 end= 70 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='цию АСУ ТП (на базе оборудования HP, PLC Элеси, Shnider, SCADA ICONICS GENESIS 32, Метран, Rosemount), систему', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= HP start= 33 end= 40 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ICONICS start= 63 end= 70 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= SCADA start= 57 end= 62 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МЕТРАН start= 83 end= 89 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='части контроля капитальных вложений при присоединении ЗАО Комстар-Регионы" к ОАО "МТС"
+Участие в реализации Фе', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= КОМСТАР РЕГИОНЫ start= 54 end= 73 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ЗАО ]
+token= МТС start= 77 end= 86 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ОАО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ческой связи и Навигации  ВМФ
+
+1998-2000г.г – помощник начальника Центра Управления Космической связи и Навига', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ВОЕННО МОРСКОЙ ФЛОТ start= 26 end= 29 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЦЕНТР УПРАВЛЕНИЯ КОСМИЧЕСКОЙ СВЯЗИ И НАВИГА start= 66 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ческом банке «Межэкономсбербанк» на Скаковой улице (в 1997 году у банка была отозвана лицензия и он прекратил', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= МЕЖЭКОНОМСБЕРБАНК start= 0 end= 32 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МЕЖЭКОНОМСБЕРБАНК start= 64 end= 71 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ый рынок (forex, МБК)
+
+· Рынок векселей
+
+07/97 – 07/99
+
+
+Московский банк развития науки
+
+
+
+
+и технологий “Техн', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 57 end= 67 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОСКОВСКИЙ БАНК РАЗВИТИЯ НАУКИ И ТЕХНОЛОГИЙ start= 57 end= 104 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ых деяний руководства, связанных с осуществлением крайне сомнительных сделок с продажей нефти в районы Татарии', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ь и зарплата
+Бизнес аналитик
+Консультирование
+• Реинжиниринг бизнес процессов
+• Управление проектами
+• Информа', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= БИЗНЕС АНАЛИТИКА start= 13 end= 28 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ИНФОРМА start= 103 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РЕИНЖИНИРИНГ start= 48 end= 60 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ь)
+
+	мать
+	Семёнова Наталья Васильевна
+	13.12.1947
+	ГУ УПФР в Октябрьском р-не г. Ростова-на-Дону, главный спе', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГЛАВНОЕ УПРАВЛЕНИЕ start= 52 end= 54 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД РОСТОВ-НА-ДОНУ start= 79 end= 97 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ПЕНСИОННЫЙ ФОНД start= 55 end= 59 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= РАЙОН ОКТЯБРЬСКИЙ; ГОРОД РОСТОВ-НА-ДОНУ start= 62 end= 97 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= СЕМЕНОВА НАТАЛЬЯ ВАСИЛЬЕВНА start= 5 end= 38 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1947-12-13 ]
+token= УПРАВЛЕНИЕ, РАЙОН ОКТЯБРЬСКИЙ; ГОРОД РОСТОВ-НА-ДОНУ; ПЕНСИОННЫЙ ФОНД (ПФР), РОССИЯ start= 55 end= 97 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ьский И.Ю.
+
+Ямпольский Игорь Юрьевич, 25.07.1971 года рождения, уроженец г. Москвы.
+
+Имеет паспорт серии 4506,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 73 end= 82 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ЯМПОЛЬСКИЙ ИГОРЬ ЮРЬЕВИЧ start= 12 end= 82 class= Лицо tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Дата рождения value=1971-07-25 ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='ьтрами, группировками, вложенными данными.
+Январь 2012 — Июнь 2012
+6 месяцев
+
+
+ООО "Олимп СПб"
+Санкт-Петербург', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД САНКТ-ПЕТЕРБУРГ start= 90 end= 93 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ГОРОД САНКТ-ПЕТЕРБУРГ start= 95 end= 110 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОЛИМП start= 79 end= 110 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL additional=[ key=Организационно-правовая форма value=ООО ]
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='– 8-926-258-70-64.
+
+Образование высшее: в 2002 году окончила МТУСИ, экономист, по специальности – бухгалтерски', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= 79262587064 start= 2 end= 17 class= Телефон tokenExtractorName= Телефонный номер. tokenExtractorType= FUNCTION
+token= МТУСИ  start= 61 end= 66 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='– Московский государственный институт радиотехники, электроники и автоматики (ТУ), факультет: «Вычислительные', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+[ key=Комментарий value=расположен в ]
+[ key=Комментарий value=расположен в ]
+token= ГОРОД МОСКВА start= 2 end= 12 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МОСКОВСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ РАДИОТЕХНИКИ, ЭЛЕКТРОНИКИ И АВТОМАТИКИ start= 2 end= 81 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ФАКУЛЬТЕТ; МОСКОВСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ РАДИОТЕХНИКИ, ЭЛЕКТРОНИКИ И АВТОМАТИКИ, ГОРОД МОСКВА start= 2 end= 92 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='— Проектирование и строительство ВОЛС, Учебный центр, Лентелефонстрой
+2008  — Сметное дело в строительстве,', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ЛЕНТЕЛЕФОНСТРОЙ start= 54 end= 69 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
+ParseTextRequest{text='№ 141018, выданный ОВД Муниципального района «Дорогомилово» г. Москвы, 23.12.2003 года.
+
+Прописан и проживает', tokenBindingMode=NO_BINDING, customDelimiter='null'}
+token= ГОРОД МОСКВА start= 60 end= 69 class= Место tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ start= 19 end= 22 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+token= ОТДЕЛЕНИЕ; МИНИСТЕРСТВО ВНУТРЕННИХ ДЕЛ (МВД) start= 19 end= 22 class= Организация tokenExtractorName= Сущности Pullenti tokenExtractorType= PULLENTI_UTIL
+----------------------------------------------------------------------------------------
