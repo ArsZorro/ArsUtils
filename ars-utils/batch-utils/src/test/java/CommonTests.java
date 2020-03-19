@@ -250,4 +250,17 @@ public class CommonTests {
         System.out.println(s.substring(534, 548));
         System.out.println(s.substring(425, 453));
     }
+
+    @Test
+    public void instanceOfTest() {
+        if (null instanceof String) {
+            System.out.println("!!!");
+        }
+    }
+
+    @Test
+    public void compareWithNull() {
+        Integer c = null;
+        System.out.println(c > 2);
+    }
 }

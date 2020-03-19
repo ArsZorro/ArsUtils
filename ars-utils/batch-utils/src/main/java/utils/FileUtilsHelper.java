@@ -22,6 +22,8 @@ import org.apache.commons.io.filefilter.FileFileFilter;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.StopWatch;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
@@ -36,6 +38,8 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.util.DigestUtils;
 
 public abstract class FileUtilsHelper {
+    private static final Logger logger = LogManager.getLogger(FileUtilsHelper.class);
+
     private static final Integer DEFAULT_BYTES_SIZE = 1024;
 
     public static void createManyBigFiles(String path, String incomingFile, String resultFile, int startRowPosition, int maxLinesCounter) throws Exception {
@@ -374,6 +378,19 @@ public abstract class FileUtilsHelper {
             } else {
                 copyResourceToFilePath(resource, to + relativePath);
             }
+        }
+    }
+
+    public static void write(String inputPath, String toDirectoryPath) {
+        File inputFile = new File(inputPath);
+        File toDirectory = new File(toDirectoryPath);
+        if (!toDirectory.exists() && !toDirectory.mkdirs()) {
+            throw new RuntimeException("Cant create file: " + toDirectoryPath);
+        }
+        try {
+            FileUtils.copyToDirectory(inputFile, toDirectory);
+        } catch (IOException e) {
+            logger.error("Exception while copy", e);
         }
     }
 
