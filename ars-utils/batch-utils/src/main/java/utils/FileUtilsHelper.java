@@ -25,12 +25,6 @@ import org.apache.commons.lang3.time.StopWatch;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.docx4j.openpackaging.exceptions.Docx4JException;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
-import org.docx4j.wml.P;
-import org.docx4j.wml.R;
-import org.docx4j.wml.Text;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -427,44 +421,8 @@ public abstract class FileUtilsHelper {
             case "xltm" :
                 text = ExcelUtils.getText(inputFile);
                 break;
-            // case "docx" :
-            // case "doc" :
-                // text = readDocxFile(inputFile);
-                // break;
-                // try {
-                //     StringBuilder stringBuilder = new StringBuilder();
-                //     WordprocessingMLPackage wordPackage = WordprocessingMLPackage.load(inputFile);
-                //     MainDocumentPart mainDocumentPart = wordPackage.getMainDocumentPart();
-                //     List<Object> paragraphs = mainDocumentPart.getContent();
-                //     List<Object> allRuns = null;
-                //     int k = 1;
-                //     for (Object par : paragraphs) {
-                //         if(par instanceof P) {
-                //             P p = (P) par;
-                //             // Get all the runs in the paragraph
-                //             allRuns = p.getContent();
-                //         }
-                //         int i = 1;
-                //         for (Object obj : allRuns) {
-                //             if(obj instanceof R) {
-                //                 List<Object> r = ((R)obj).getContent();
-                //                 for (int j = 0; j < r.size(); ++j) {
-                //                     javax.xml.bind.JAXBElement jaxb = (javax.xml.bind.JAXBElement) r.get(j);
-                //                     Text t = (org.docx4j.wml.Text) jaxb.getValue();
-                //                     stringBuilder.append(t.getValue()).append("\n");
-                //                 }
-                //             }
-                //             i++;
-                //         }
-                //         k++;
-                //     }
-                //     text = stringBuilder.toString();
-                //     break;
-                // } catch (Docx4JException e) {
-                //     throw new RuntimeException("File:" + inputFile.getAbsolutePath());
-                // }
             default :
-                text = TikaConverter.process(inputFile, extension);
+                text = null;
                 break;
         }
 
